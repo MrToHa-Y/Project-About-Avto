@@ -1,0 +1,2268 @@
+@font-face{
+    font-family: interR;
+    src: url("fonts/Inter18pt-Regular.woff2");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: interM;
+    src: url("fonts/Inter18pt-Medium.woff2");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: interS;
+    src: url("fonts/Inter24pt-SemiBold.woff2");
+    font-display: swap;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, button, p, a{
+    color: var(--black-text)
+}
+
+body{
+    background-color: var(--white-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+label>svg>rect{
+    fill: var(--gray-element);
+}
+
+:root{
+    --red-text: rgba(194, 0, 0, 1);
+    --black-text: rgba(38, 38, 39, 1);
+    --black-element: rgba(0, 0, 0, 1);
+    --white-text: rgba(255, 255, 255, 1);
+    --translucent-element: rgba(255, 255, 255, 0.5);
+    --gray-text: rgba(94, 94, 94, 1);
+    --gray-element: rgba(233, 236, 239, 1);
+
+    --heading-font-n: 40px;
+    --heading-font-s: 24px;
+    --normal-font-s: 16px;
+    --small-font-s: 14px;
+    --minimal-font-s: 12px;
+
+    --button-padding-n: 24px 40px;
+    --button-padding-s: 12px 24px;
+    --form-padding-n: 22px 24px;
+
+    --border-button-m: solid 1px;
+    --border-radius-button: 40px;
+    --border-radius-n: 30px;
+    --border-radius-s: 18px;
+    --border-radius-t: 12px;
+}
+
+html[data-theme="dark"]{
+    --red-text: #dd0909;
+    --black-element: #E0E0E0;
+    --black-text: #E0E0E0;
+    --white-text: rgb(31, 31, 31);
+    --translucent-element: rgba(255, 255, 255, 0.35);
+    --gray-text: #A0A0A0;
+    --gray-element: rgb(42, 45, 46);
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 1001;
+    font-family: interM;
+}
+
+.fix{
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--black-element), transparent); 
+    z-index: 1001;
+}
+
+#mega_toggle{
+    display: none;
+}
+
+label[for="mega_toggle"]{
+    color: var(--white-text);
+    font-size: var(--normal-font-s);
+    margin: 10px 20px;
+}
+
+#mega_toggle:checked ~ .gradient nav,
+#mega_toggle_2:checked ~ .gradient nav{
+    background: var(--white-text);
+    width: 98%;
+    padding: 0px 22px;
+    margin: 10px 15px 0 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: padding 0.5s ease;
+}
+
+.gradient{
+    position: relative;
+    z-index: 10001;
+}
+
+.gradient>nav{
+    animation: fadeInUp 0.8s ease;
+}
+
+#mega_toggle:checked ~ .gradient nav label[for="mega_toggle_2"],
+#mega_toggle:checked ~ .gradient nav .nav_main a,
+#mega_toggle_2:checked ~ .gradient nav label[for="mega_toggle"],
+#mega_toggle_2:checked ~ .gradient nav .nav_main a{
+    color: var(--black-text); 
+}
+
+#mega_toggle_2:checked ~ .gradient nav label[for="mega_toggle_2"],
+#mega_toggle:checked ~ .gradient nav label[for="mega_toggle"]{
+    color: var(--red-text);
+    font-weight: bold;
+}
+
+.mega_menu{
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    width: 98%;
+    height: 600px;
+    background-color: var(--white-text); 
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#mega_toggle:checked ~ .mega_menu,
+#mega_toggle_2:checked ~ .mega_menu_2{
+    display: flex; 
+    opacity: 1;
+}
+
+header input[type=radio]{
+    display: none;
+}
+
+.brands{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brands :first-child{
+    margin-top: 80px;
+}
+
+.brands label{
+    display: block;
+    width: 120px;
+    height: 30px;
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    transition: color 0.9s ease;
+}
+
+.brand_content{
+    display: none;
+    width: 440px;
+    height: 530px;
+    background-color: var(--gray-element);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin-top: 50px;
+}
+
+#brand-chevrolet:checked ~ .brand_content.chevrolet,
+#brand-jetour:checked ~ .brand_content.jetour,
+#brand-soueast:checked ~ .brand_content.soueast,
+#brand-mg:checked ~ .brand_content.mg,
+#service:checked ~ .services_content.service,
+#warranty:checked ~ .services_content.warranty,
+#shares:checked ~ .services_content.shares,
+#manuals:checked ~ .services_content.manuals{
+    display: flex;
+}
+
+.brand_content button{
+    text-align: left;
+    border: none;
+    border-radius: var(--border-radius-button);
+    color: var(--red-text);
+    font-weight: 500; 
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px 10px;
+    margin: 10px;
+    height: 50px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    width: 130px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand_content button::after{
+    content: '→';
+}
+
+#bor{
+    border: var(--border-button-m) var(--red-text);
+    width: 110px;
+}
+
+#bor:hover{
+    width: 130px;
+}
+
+#bor::after{
+    position: absolute;
+    right: 7px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(10px);
+}
+
+#bor:hover::after{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content_about img{
+    position: absolute;
+    bottom: 342px;
+}
+
+.content_name_and_price{
+    margin-left: 60px;
+}
+
+.content_name_and_price h1{
+    font-size: 45px;
+    margin: 40px 0 15px 0;
+}
+
+.content_name_and_price p{
+    font-size: 20px;
+    margin: 10px 0 30px 0;
+}
+
+#mar{
+    margin-left: 50px;
+}
+
+.content_about{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.content_about img{
+    width: 16px;
+    height: 16px;
+}
+
+#brand-chevrolet:checked ~ .brands label[for="brand-chevrolet"],
+#brand-jetour:checked ~ .brands label[for="brand-jetour"],
+#brand-soueast:checked ~ .brands label[for="brand-soueast"],
+#brand-mg:checked ~ .brands label[for="brand-mg"],
+#service:checked ~ .services label[for="service"],
+#warranty:checked ~ .services label[for="warranty"],
+#shares:checked ~ .services label[for="shares"],
+#manuals:checked ~ .services label[for="manuals"]{
+    color: var(--red-text);
+    font-weight: bold;
+}
+
+.menu_open_model{
+    display: flex;
+}
+
+.menu_open_model div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.menu_open_model label{
+    border-radius: var(--border-radius-button);
+    background-color: var(--white-text);
+    color: var(--black-text);
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 12px 10px;
+    margin: 10px;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.9s ease;
+}
+
+#model-cobalt:checked ~ .brand_content label[for="model-cobalt"],
+#model-tracker:checked ~ .brand_content label[for="model-tracker"],
+#model-malibu:checked ~ .brand_content label[for="model-malibu"],
+#model-onix:checked ~ .brand_content label[for="model-onix"],
+#model-damas:checked ~ .brand_content label[for="model-damas"],
+#model-captiva:checked ~ .brand_content label[for="model-captiva"],
+#model-mg_zs:checked ~ .brand_content label[for="model-mg_zs"],
+#model-mg_hs:checked ~ .brand_content label[for="model-mg_hs"],
+#model-x50:checked ~ .brand_content label[for="model-x50"],
+#model-x70:checked ~ .brand_content label[for="model-x70"],
+#model-t2:checked ~ .brand_content label[for="model-t2"],
+#model-dashing:checked ~ .brand_content label[for="model-dashing"],
+#model-s09:checked ~ .brand_content label[for="model-s09"],
+#model-s07:checked ~ .brand_content label[for="model-s07"]{
+    background-color: var(--red-text);
+    color: var(--white-text);
+}
+
+.car_images{
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.car_images_soueast,
+.car_images_mg{
+    width: 1300px !important;
+}
+
+.car_images_soueast img,
+.car_images_mg img{
+    width: 75% !important;
+}
+
+.car_images img{
+    display: none;
+    width: 80%;
+}
+
+.brand_content>:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#model-cobalt:checked ~ .brand_content .car_images .cobalt,
+#model-tracker:checked ~ .brand_content .car_images .tracker,
+#model-malibu:checked ~ .brand_content .car_images .malibu,
+#model-onix:checked ~ .brand_content .car_images .onix,
+#model-damas:checked ~ .brand_content .car_images .damas,
+#model-captiva:checked ~ .brand_content .car_images .captiva,
+#model-mg_zs:checked ~ .brand_content .car_images .zs,
+#model-mg_hs:checked ~ .brand_content .car_images .hs,
+#model-x50:checked ~ .brand_content .car_images .x50,
+#model-x70:checked ~ .brand_content .car_images .x70,
+#model-t2:checked ~ .brand_content .car_images .t2,
+#model-dashing:checked ~ .brand_content .car_images .dashing,
+#model-s09:checked ~ .brand_content .car_images .s09,
+#model-s07:checked ~ .brand_content .car_images .s07{
+    display: block;
+}
+
+.nav_logo{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_logo>a>svg{
+    color: var(--white-text)
+}
+        
+#mega_toggle:checked ~ .gradient nav .nav_logo>a>svg,
+#mega_toggle_2:checked ~ .gradient nav .nav_logo>a>svg{
+    color: var(--red-text)
+}
+
+#theme_toggle{
+    display: none;
+}
+
+.theme_toggle_horizontal{
+    position: relative;
+    height: 40px;
+    width: 75px;
+    border-radius: var(--border-radius-button);
+    transition: background-color 0.3s ease;
+    background-color: var(--white-text)
+}
+
+.theme_switch_button{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .theme_switch_button{
+    left: 35px;
+    background: rgb(40, 40, 40);
+}
+
+.theme_switch_button .theme_icon{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+.theme_switch_button .sun_icon{
+    display: block;
+}
+
+.theme_switch_button .moon_icon{
+    display: none;
+}
+
+html[data-theme="dark"] .theme_switch_button .sun_icon{
+    display: none;
+}
+
+html[data-theme="dark"] .theme_switch_button .moon_icon{
+    display: block;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 88px;
+}
+
+nav a{
+    font-size: var(--normal-font-s);
+}
+
+.nav_main{
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+.nav_main a{
+    color: var(--white-text);
+    margin: 10px 20px;
+}
+
+.nav_contacts{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav_contacts a{
+    background-color: var(--white-text);
+    color: var(--black-text);
+    border-radius: var(--border-radius-button);
+    padding: 12px 18px;
+    margin: 10px 10px;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+}
+
+.nav_contacts>:nth-child(1),
+.nav_contacts>:nth-child(2),
+.nav_contacts>:nth-child(3){
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.nav_contacts>:nth-child(1){
+    width: 245px;
+}
+
+.nav_contacts>:nth-child(2),
+.nav_contacts>:nth-child(3){
+    width: 52px;
+}
+
+.nav_contacts>:nth-child(1)::after,
+.nav_contacts>:nth-child(2)::after,
+.nav_contacts>:nth-child(3)::after{
+    position: absolute;
+    right: 15px;
+    transition: transform 0.5s ease;
+    transform: translateX(100px);
+}
+
+.nav_contacts>:nth-child(1)::after{
+    content: '→';
+}
+
+.nav_contacts>:nth-child(2)::after{
+    content: 'Telegram';
+}
+
+.nav_contacts>:nth-child(3)::after{
+    content: '1213';
+}
+
+.nav_contacts>:nth-child(1):hover{
+    width: 260px;
+}
+
+.nav_contacts>:nth-child(2):hover{
+    width: 125px;
+}
+
+.nav_contacts>:nth-child(3):hover{
+    width: 90px;
+}
+
+.nav_contacts>:nth-child(1):hover::after,
+.nav_contacts>:nth-child(2):hover::after,
+.nav_contacts>:nth-child(3):hover::after{
+    transform: translateX(0);
+}
+
+#mega_toggle:checked ~ .gradient nav .nav_contacts a,
+#mega_toggle_2:checked ~ .gradient nav .nav_contacts a,
+#mega_toggle:checked ~ .gradient nav .nav_contacts .theme_toggle_horizontal,
+#mega_toggle_2:checked ~ .gradient nav .nav_contacts .theme_toggle_horizontal{
+    background-color: var(--gray-element); 
+}
+
+.nav_contacts>:nth-child(4){
+    color: var(--red-text);
+    font-weight: bold;
+}
+
+label[for="mega_toggle_2"]{
+    color: var(--white-text);
+    font-size: var(--normal-font-s);
+    margin: 10px 20px;
+}
+
+#mega_toggle_2{
+    display: none;
+}
+
+.mega_menu_2{
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 15px;
+    width: 98%;
+    height: 400px;
+    background-color: var(--white-text); 
+    border-radius: 20px;
+}
+
+.services{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services :first-child{
+    margin-top: 80px;
+}
+
+.services label{
+    width: 120px;
+    height: 30px;
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+
+.services_content{
+    display: none;
+    width: 85%;
+    height: 85%;
+    overflow: hidden;
+    background-position: top;
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.figure-card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.figure-card img{
+   width: 2000px;
+   position: absolute;
+   bottom: -250px;
+   object-fit: cover;
+}
+
+.mega_menu_2>:nth-child(8)>.figure-card>a>img{
+    bottom: -400px;
+}
+
+figcaption{
+    position: relative;
+    top: 140px;
+    left: 75px;
+    font-size: var(--heading-font-n);
+    font-weight: 700;
+    color: var(--white-text);   
+}
+
+.slider_hir{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: interM;
+    overflow: hidden;
+}
+
+.slider_hir input[type="radio"]{
+    display: none;
+}
+
+.slide_wrapper_hir{
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: 100%;
+}
+
+.mobile_navigation{
+    display: none;
+}
+
+.slide_hir{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.slide_hir::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.slide_hir::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    z-index: -1;
+}
+
+.slide_1_hir::before{
+    background-image: url('images/slider_1.jpg');
+}
+.slide_2_hir::before{
+    background-image: url('images/slider_2.png');
+}
+.slide_3_hir::before{
+    background-image: url('images/slider_3.jpg');
+}
+
+.slide_content_hir{
+    color: var(--white-text);
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp{
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide_content_hir a{
+    padding: var(--button-padding-s);
+    border-radius: var(--border-radius-button);
+    margin-right: 15px;
+}
+
+.slide_content_hir h1{
+    width: 665px;
+    font-size: var(--heading-font-n);
+    line-height: 150%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.slide_2_hir h1,
+.slide_3_hir h1{
+    margin-bottom: 50px;
+}
+
+.slide_content_hir div>:first-child{
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--red-text);
+}
+
+.slide_content_hir div>:last-child{
+    border: var(--border-button-m) rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.navigation_hir{
+    right: 40px;
+    top: 45%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    animation: fadeInUp 0.8s ease;
+}
+
+.nav-button{
+    cursor: pointer;
+}
+
+.navigation_hir label img{
+    width: 40px;
+}
+
+.slide_counter_hir{
+    color: var(--white-text);
+    font-size: var(--small-font-s);
+}
+
+#slide_1_hir:checked ~ .slide_wrapper_hir{
+    transform: translateY(0);
+}
+
+#slide_2_hir:checked ~ .slide_wrapper_hir{
+    transform: translateY(-100vh);
+}
+
+#slide_3_hir:checked ~ .slide_wrapper_hir{
+    transform: translateY(-200vh);
+}
+
+.slide_counter_hir::after {
+    content: '1/3';
+}
+
+#slide_1_hir:checked ~ .navigation_hir .slide_counter_hir::after{
+    content: '1/3';
+}
+
+#slide_2_hir:checked ~ .navigation_hir .slide_counter_hir::after{
+    content: '2/3';
+}
+
+#slide_3_hir:checked ~ .navigation_hir .slide_counter_hir::after{
+    content: '3/3';
+}
+
+.nav-button{
+    display: none;
+}
+
+#slide_1_hir:checked ~ .navigation_hir .nav-button.nav-up.to-slide-2-up,
+#slide_1_hir:checked ~ .navigation_hir .nav-button.nav-down.to-slide-3-down{
+    display: flex;
+}
+
+#slide_2_hir:checked ~ .navigation_hir .nav-button.nav-up.to-slide-3-up, 
+#slide_2_hir:checked ~ .navigation_hir .nav-button.nav-down.to-slide-1-down{
+    display: flex;
+}
+
+#slide_3_hir:checked ~ .navigation_hir .nav-button.nav-up.to-slide-1-up, 
+#slide_3_hir:checked ~ .navigation_hir .nav-button.nav-down.to-slide-2-down{
+    display: flex;
+}
+
+.brand_bar{
+    display: flex;
+    position: sticky;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+.brand_bar>div{
+    width: 15%;
+    height: 70px;
+    background-color: var(--translucent-element);
+    margin: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.brand_bar>div>a{
+    width: 270px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand_bar>div>a>svg{
+    color: var(--white-text);
+}
+
+.brand_bar>div:hover{
+    background-color: var(--black-text);
+}
+
+#left_border_radius{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#right_border_radius{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.brand_bar_mega_menu{
+    position: absolute;
+    bottom: 60px;
+    border-radius: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.lin{
+    position: relative;
+    background-color:  var(--translucent-element);
+    height: 180px;
+    width: 850px;
+    display: none;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    bottom: 5px;
+}
+
+#mega_menu_1{
+    left: 0px;
+}
+
+#mega_menu_2{
+    left: -200px;
+}
+
+#mega_menu_3{
+    left: -370px;
+}
+
+#mega_menu_4{
+    left: -580px;
+}
+
+.fle{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+    width: 450px; 
+    margin-bottom: 30px;
+    padding: 30px 5px 40px 50px;
+}
+
+.models_images{
+    position: absolute;
+    left: 480px;
+}
+
+.brand_bar_mega_menu a{
+    display: none;
+    color: var(--black-text);
+    font-size: 20px;
+    background-color: var(--white-text);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-button);
+    margin: 5px; 
+}
+
+.brand_bar_mega_menu a:hover{
+    color: var(--white-text);
+    background-color: var(--red-text);
+}
+
+.brand_bar>div:hover .brand_bar_mega_menu a{
+    display: flex;
+}
+
+.brand_bar>div:hover .brand_bar_mega_menu{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.brand_bar>div:hover .brand_bar_mega_menu>.lin{
+    display: flex;
+}
+
+.brand_bar_mega_menu img{
+    max-width: 350px;
+}
+
+.brand_bar_mega_menu a{
+    display: none;
+}
+
+.models_images>:nth-child(2),
+.models_images>:nth-child(3),
+.models_images>:nth-child(4),
+.models_images>:nth-child(5),
+.models_images>:nth-child(6),
+.models_images>:nth-child(7),
+.models_images>:nth-child(2),
+.models_images>:nth-child(3),
+.models_images>:nth-child(4),
+.models_images>:nth-child(5),
+.models_images>:nth-child(2),
+.models_images>:nth-child(3),
+.models_images>:nth-child(2),
+.models_images>:nth-child(3){
+    display: none;
+}
+
+.cobalt_link:hover ~ .models_images .checked_image_che,
+.tracker_link:hover ~ .models_images .checked_image_che,
+.malibu_link:hover ~ .models_images .checked_image_che,
+.onix_link:hover ~ .models_images .checked_image_che,
+.damas_link:hover ~ .models_images .checked_image_che,
+.captiva_link:hover ~ .models_images .checked_image_che,
+.x50_link:hover ~ .models_images .checked_image_jet,
+.x70_link:hover ~ .models_images .checked_image_jet,
+.t2_link:hover ~ .models_images .checked_image_jet,
+.dashing_link:hover ~ .models_images .checked_image_jet,
+.s09_link:hover ~ .models_images .checked_image_sou,
+.s07_link:hover ~ .models_images .checked_image_sou,
+.zs_link:hover ~ .models_images .checked_image_mg ,
+.hs_link:hover ~ .models_images .checked_image_mg{
+    display: none;
+}
+
+.cobalt_link:hover ~ .models_images .cobalt_image,
+.tracker_link:hover ~ .models_images .tracker_image,
+.malibu_link:hover ~ .models_images .malibu_image,
+.onix_link:hover ~ .models_images .onix_image,
+.damas_link:hover ~ .models_images .damas_image,
+.captiva_link:hover ~ .models_images .captiva_image,
+.x50_link:hover ~ .models_images .x50_image,
+.x70_link:hover ~ .models_images .x70_image,
+.t2_link:hover ~ .models_images .t2_image,
+.dashing_link:hover ~ .models_images .dashing_image,
+.s09_link:hover ~ .models_images .s09_image,
+.s07_link:hover ~ .models_images .s07_image,
+.zs_link:hover ~ .models_images .zs_image,
+.hs_link:hover ~ .models_images .hs_image{
+    display: block;
+}
+
+.dealership_block{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+}
+
+.dealership_block>div{
+    display: flex;
+}
+
+.heading{
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+    font-family: interM;
+    margin: 80px 0 10px 0;
+}
+
+.heading h1{
+    font-size: var(--heading-font-n);
+    font-weight: bold;
+    font-family: interM;
+    margin: 10px 0 80px 0;
+}
+
+.dealership_slider{
+    font-family: interM;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 780px;
+}
+
+.dealership_slider input[type="radio"]{
+    display: none;
+}
+
+.slide_dea{
+    width: 100%;
+    height: 780px;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+}
+
+.slide_wrapper_dea{
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: 100%;
+}
+
+.slide_dea{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: var(--border-radius-s);
+}
+
+.slide_1_dea{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68cbfa653330a.png");
+}
+
+.slide_2_dea{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/690320e42676d.jpg");
+}
+
+.slide_3_dea{
+    background-image: url("images/dealership_slider_1.png");
+}
+
+.slide_4_dea{
+    background-image: url("images/dealership_slider_3.jpg");
+}
+
+.navigation_dea{
+    right: 40px;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+}
+
+.nav-button_dea{
+    cursor: pointer;
+}
+
+.navigation_dea label img{
+    width: 40px;
+}
+
+.slide_counter_dea{
+    color: var(--white-text);
+    font-size: var(--small-font-s);
+}
+
+#slide_dea_1:checked ~ .slide_wrapper_dea{
+    transform: translateY(0);
+}
+
+#slide_dea_2:checked ~ .slide_wrapper_dea{
+    transform: translateY(-780px);
+}
+
+#slide_dea_3:checked ~ .slide_wrapper_dea{
+    transform: translateY(-1560px);
+}
+
+#slide_dea_4:checked ~ .slide_wrapper_dea{
+    transform: translateY(-2340px);
+}
+
+.slide_counter_dea::after {
+    content: '1/4';
+}
+
+#slide_dea_1:checked ~ .navigation_dea .slide_counter_dea::after{
+    content: '1/4';
+}
+
+#slide_dea_2:checked ~ .navigation_dea .slide_counter_dea::after{
+    content: '2/4';
+}
+
+#slide_dea_3:checked ~ .navigation_dea .slide_counter_dea::after{
+    content: '3/4';
+}
+#slide_dea_4:checked ~ .navigation_dea .slide_counter_dea::after{
+    content: '4/4';
+}
+
+.nav-button_dea{
+    display: none;
+}
+
+#slide_dea_1:checked ~ .navigation_dea .nav-button_dea.nav-up_dea.to-slide-2-up_dea,
+#slide_dea_1:checked ~ .navigation_dea .nav-button_dea.nav-down_dea.to-slide-4-down_dea{
+    display: flex;
+}
+
+#slide_dea_2:checked ~ .navigation_dea .nav-button_dea.nav-up_dea.to-slide-3-up_dea, 
+#slide_dea_2:checked ~ .navigation_dea .nav-button_dea.nav-down_dea.to-slide-1-down_dea{
+    display: flex;
+}
+
+#slide_dea_3:checked ~ .navigation_dea .nav-button_dea.nav-up_dea.to-slide-4-up_dea, 
+#slide_dea_3:checked ~ .navigation_dea .nav-button_dea.nav-down_dea.to-slide-2-down_dea{
+    display: flex;
+}
+
+#slide_dea_4:checked ~ .navigation_dea .nav-button_dea.nav-down_dea.to-slide-3-down_dea, 
+#slide_dea_4:checked ~ .navigation_dea .nav-button_dea.nav-up_dea.to-slide-1-up_dea{
+    display: flex;
+}
+
+.dealership_info{
+    justify-content: center;
+    gap: 24px;
+}
+
+.dealership_info>div{
+    width: 900px;
+    height: 220px;
+    border-radius: var(--border-radius-s);
+    margin: 36px 0;
+    background-color: var(--gray-element);
+}
+
+.dealership_description{
+    font-family: interM;
+    padding: 32px 28px;
+}
+
+.dealership_description>h2{
+    font-size: var(--heading-font-s);
+    margin: 16px 0 20px 0;
+}
+
+.dealership_description>p{
+    font-size: var(--normal-font-s);
+    color: var(--gray-text);
+    margin: 20px 0 16px 0;
+}
+
+.dealership_feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dealership_contact{
+    display: flex;
+    font-family: interM;
+    font-size: var(--normal-font-s);
+}
+
+.contacts>div{
+    margin: 30px;
+}
+
+.address_icon{
+    width: 240px;
+}
+
+.phone_icon{
+    width: 170px;
+}
+
+.open_hours_icon{
+    width: 200px;
+}
+
+.contacts img{
+    width: 24px;
+    margin: 0 5px;
+}
+
+.contacts>div>p{
+    color: var(--gray-text);
+    width: 100%;
+    text-align: right;
+}
+
+.contacts>div>div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--black-text);
+}
+
+.social_media{
+    display: flex;
+    margin: 10px 0 20px 0;
+    gap: 16px;
+}
+
+.social_media a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: var(--border-radius-button);
+    color: var(--black-text);
+    background-color: var(--white-text);
+    padding: 12px 28px;
+    font-family: interM;
+    font-size: var(--minimal-font-s);
+}
+
+.social_media svg{
+    width: 16px;
+    height: 16px;
+}
+
+.car_catalog_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    font-family: "interM";
+    width: 100%;
+}
+
+.car_catalog_heading{
+    margin-bottom: 60px;
+}
+
+.car_catalog_heading div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 1820px;
+}
+
+.car_catalog_heading>:first-child>:first-child{
+    color: var(--red-text); 
+}
+
+.car_catalog_heading div p{
+    width: 45%;
+    font-size: var(--normal-font-s);
+    color: var(--gray-text);
+}
+
+.car_catalog_heading div h1{
+    width: 45%;
+    font-size: var(--heading-font-n);
+    color: var(--black-text);
+    line-height: 150%;
+}
+
+.car_catalog{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.car_catalog input{
+    display: none;
+}
+
+.catalog{
+    width: 440px;
+    height: 600px;
+    background-color: var(--gray-element);
+    border-radius: var(--border-radius-n);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.catalog_logo{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-element)
+}
+
+.colorways{
+    display: none;
+}
+
+.colorway_images{
+    height: 230px;
+}
+
+.colorway_images img{
+    width: 340px;
+    margin: 20px 0 0 0;
+    display: none;
+}
+
+.x50_image img{
+    margin: 40px 0 0 0;
+}
+
+.s07_image img,
+.s09_image img{
+    margin: 0 ;
+}
+
+.x50_image img{
+    width: 425px;
+}
+
+.hs_image img{
+    width: 425px;
+}
+
+.price p{
+    font-size: 18px;
+}
+
+.colorways>:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border-button-m) rgba(204, 204, 204, 1);
+    border-top: var(--border-button-m) rgba(204, 204, 204, 1);
+    width: 120%;
+    padding: 14px 0;
+    margin: 30px 0;
+}
+
+.x50_colorways>:last-child{
+    width: 408px;
+}
+
+.hs_colorways>:last-child{
+    width: 408px;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+}
+
+.tag label{
+    width: 24px;
+    height: 24px;
+    border-radius: 60px;
+    margin: 0 10px 0 0;
+}
+
+.more a{
+    color: var(--black-text);
+    font-size: var(--minimal-font-s);
+}
+
+.catalog_models_button{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.catalog_models_button label{
+    background-color: var(--white-text);
+    border-radius: 60px;
+    padding: var(--button-padding-s);
+}
+
+label[for="colorway_mal_dark_gray"],
+label[for="colorway_das_dark_gray"],
+label[for="colorway_s09_dark_gray"],
+label[for="colorway_hs_dark_gray"]{
+    background-color: rgb(71, 77, 80);
+}
+
+label[for="colorway_mal_white"],
+label[for="colorway_tra_white"],
+label[for="colorway_oni_white"],
+label[for="colorway_dam_white"],
+label[for="colorway_cob_white"],
+label[for="colorway_cap_white"],
+label[for="colorway_x50_white"],
+label[for="colorway_x70_white"],
+label[for="colorway_t2_white"],
+label[for="colorway_das_white"],
+label[for="colorway_s07_white"],
+label[for="colorway_s09_white"],
+label[for="colorway_zs_white"],
+label[for="colorway_hs_white"]{
+    background-color: rgb(255, 255, 255);
+}
+
+label[for="colorway_tra_gray"],
+label[for="colorway_oni_gray"],
+label[for="colorway_cap_gray"],
+label[for="colorway_x50_gray"],
+label[for="colorway_x70_gray"],
+label[for="colorway_t2_gray"],
+label[for="colorway_s07_gray"],
+label[for="colorway_zs_gray"],
+label[for="colorway_hs_gray"]{
+    background-color: rgb(120, 131, 135);
+}
+
+label[for="colorway_tra_black"],
+label[for="colorway_oni_black"],
+label[for="colorway_cob_black"],
+label[for="colorway_cap_black"],
+label[for="colorway_x50_black"],
+label[for="colorway_x70_black"],
+label[for="colorway_t2_black"],
+label[for="colorway_das_black"],
+label[for="colorway_s09_black"],
+label[for="colorway_zs_black"],
+label[for="colorway_hs_black"]{
+    background-color: rgb(0, 0, 0);
+}
+
+label[for="colorway_tra_dirty_blue"],
+label[for="colorway_oni_dirty_blue"],
+label[for="colorway_dam_dirty_blue"]{
+    background-color: rgb(0, 69, 90);
+}
+
+label[for="colorway_tra_red"],
+label[for="colorway_cob_red"],
+label[for="colorway_cap_red"],
+label[for="colorway_zs_red"],
+label[for="colorway_hs_red"]{
+    background-color: rgb(159, 7, 2);
+}
+
+label[for="colorway_oni_light_gray"],
+label[for="colorway_x70_light_gray"],
+label[for="colorway_das_light_gray"],
+label[for="colorway_t2_light_gray"],
+label[for="colorway_s07_light_gray"],
+label[for="colorway_s09_light_gray"],
+label[for="colorway_x50_light_gray"]{
+    background-color: rgb(189, 192, 194);
+}
+
+label[for="colorway_dam_dark_blue"],
+label[for="colorway_s09_dark_blue"]{
+    background-color: rgb(0, 6, 51);
+}
+
+label[for="colorway_cob_blue"],
+label[for="colorway_zs_blue"]{
+    background-color: rgb(0, 43, 160);
+}
+
+label[for="colorway_cob_metalic"]{
+    background-color: rgb(145, 141, 128);
+}
+
+label[for="colorway_x50_sky_blue"],
+label[for="colorway_x70_sky_blue"],
+label[for="colorway_das_sky_blue"],
+label[for="colorway_s07_sky_blue"]{
+    background-color: rgb(94, 146, 213);
+}
+
+label[for="colorway_das_cherry_red"]{
+    background-color: rgb(126, 15, 23);
+}
+
+label[for="colorway_s09_green"]{
+    background-color: rgb(1, 95, 77);
+}
+
+label[for="colorway_s07_brown"]{
+    background-color: rgb(75, 60, 56);
+}
+
+label[for="colorway_s07_navy_blue"],
+label[for="colorway_hs_navy_blue"]{
+    background-color: rgb(33, 60, 109);
+}
+
+label[for="colorway_t2_ochre"]{
+    background-color: rgb(185, 169, 144);
+}
+
+#catalog_model_malibu:checked ~ .malibu_colorways,
+#catalog_model_tracker:checked ~ .tracker_colorways,
+#catalog_model_onix:checked ~ .onix_colorways,
+#catalog_model_damas:checked ~ .damas_colorways,
+#catalog_model_cobalt:checked ~ .cobalt_colorways,
+#catalog_model_captiva:checked ~ .captiva_colorways,
+#catalog_model_x50:checked ~ .x50_colorways,
+#catalog_model_x70:checked ~ .x70_colorways,
+#catalog_model_t2:checked ~ .t2_colorways,
+#catalog_model_dashing:checked ~ .dashing_colorways,
+#catalog_model_s07:checked ~ .s07_colorways,
+#catalog_model_s09:checked ~ .s09_colorways,
+#catalog_model_zs:checked ~ .zs_colorways,
+#catalog_model_hs:checked ~ .hs_colorways{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#colorway_mal_white:checked ~ .colorways.malibu_colorways .colorway_images.malibu_image .mal_white,
+#colorway_mal_dark_gray:checked ~ .colorways.malibu_colorways .colorway_images.malibu_image .mal_dark_gray,
+
+#colorway_tra_white:checked ~ .colorways.tracker_colorways .colorway_images.tracker_image .tra_white,
+#colorway_tra_gray:checked ~ .colorways.tracker_colorways .colorway_images.tracker_image .tra_gray, 
+#colorway_tra_black:checked ~ .colorways.tracker_colorways .colorway_images.tracker_image .tra_black,
+#colorway_tra_dirty_blue:checked ~ .colorways.tracker_colorways .colorway_images.tracker_image .tra_dirty_blue,
+#colorway_tra_red:checked ~ .colorways.tracker_colorways .colorway_images.tracker_image .tra_red,
+
+#colorway_oni_white:checked ~ .colorways.onix_colorways .colorway_images.onix_image .oni_white,
+#colorway_oni_light_gray:checked ~ .colorways.onix_colorways .colorway_images.onix_image .oni_light_gray, 
+#colorway_oni_black:checked ~ .colorways.onix_colorways .colorway_images.onix_image .oni_black,
+#colorway_oni_dirty_blue:checked ~ .colorways.onix_colorways .colorway_images.onix_image .oni_dirty_blue,
+#colorway_oni_gray:checked ~ .colorways.onix_colorways .colorway_images.onix_image .oni_gray,
+
+#colorway_dam_white:checked ~ .colorways.damas_colorways .colorway_images.damas_image .dam_white,
+#colorway_dam_dirty_blue:checked ~ .colorways.damas_colorways .colorway_images.damas_image .dam_dirty_blue,
+#colorway_dam_dark_blue:checked ~ .colorways.damas_colorways .colorway_images.damas_image .dam_dark_blue,
+
+#colorway_cob_white:checked ~ .colorways.cobalt_colorways .colorway_images.cobalt_image .cob_white,
+#colorway_cob_black:checked ~ .colorways.cobalt_colorways .colorway_images.cobalt_image .cob_black,
+#colorway_cob_blue:checked ~ .colorways.cobalt_colorways .colorway_images.cobalt_image .cob_blue,
+#colorway_cob_metalic:checked ~ .colorways.cobalt_colorways .colorway_images.cobalt_image .cob_metalic,
+#colorway_cob_red:checked ~ .colorways.cobalt_colorways .colorway_images.cobalt_image .cob_red,
+
+#colorway_cap_white:checked ~ .colorways.captiva_colorways .colorway_images.captiva_image .cap_white,
+#colorway_cap_black:checked ~ .colorways.captiva_colorways .colorway_images.captiva_image .cap_black,
+#colorway_cap_gray:checked ~ .colorways.captiva_colorways .colorway_images.captiva_image .cap_gray,
+#colorway_cap_red:checked ~ .colorways.captiva_colorways .colorway_images.captiva_image .cap_red,
+
+
+#colorway_x50_white:checked ~ .colorways.x50_colorways .colorway_images.x50_image .x50_white,
+#colorway_x50_black:checked ~ .colorways.x50_colorways .colorway_images.x50_image .x50_black,
+#colorway_x50_light_gray:checked ~ .colorways.x50_colorways .colorway_images.x50_image .x50_light_gray,
+#colorway_x50_gray:checked ~ .colorways.x50_colorways .colorway_images.x50_image .x50_gray,
+#colorway_x50_sky_blue:checked ~ .colorways.x50_colorways .colorway_images.x50_image .x50_sky_blue,
+
+#colorway_x70_white:checked ~ .colorways.x70_colorways .colorway_images.x70_image .x70_white,
+#colorway_x70_black:checked ~ .colorways.x70_colorways .colorway_images.x70_image .x70_black,
+#colorway_x70_sky_blue:checked ~ .colorways.x70_colorways .colorway_images.x70_image .x70_sky_blue,
+#colorway_x70_light_gray:checked ~ .colorways.x70_colorways .colorway_images.x70_image .x70_light_gray,
+#colorway_x70_gray:checked ~ .colorways.x70_colorways .colorway_images.x70_image .x70_gray,
+
+#colorway_t2_white:checked ~ .colorways.t2_colorways .colorway_images.t2_image .t2_white,
+#colorway_t2_black:checked ~ .colorways.t2_colorways .colorway_images.t2_image .t2_black,
+#colorway_t2_gray:checked ~ .colorways.t2_colorways .colorway_images.t2_image .t2_gray,
+#colorway_t2_light_gray:checked ~ .colorways.t2_colorways .colorway_images.t2_image .t2_light_gray,
+#colorway_t2_ochre:checked ~ .colorways.t2_colorways .colorway_images.t2_image .t2_ochre,
+
+#colorway_das_white:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_white,
+#colorway_das_black:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_black,
+#colorway_das_sky_blue:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_sky_blue,
+#colorway_das_cherry_red:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_cherry_red,
+#colorway_das_light_gray:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_light_gray,
+#colorway_das_dark_gray:checked ~ .colorways.dashing_colorways .colorway_images.dashing_image .das_dark_gray,
+
+
+#colorway_s07_light_gray:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_light_gray,
+#colorway_s07_white:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_white,
+#colorway_s07_sky_blue:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_sky_blue,
+#colorway_s07_brown:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_brown,
+#colorway_s07_gray:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_gray,
+#colorway_s07_navy_blue:checked ~ .colorways.s07_colorways .colorway_images.s07_image .s07_navy_blue,
+
+#colorway_s09_white:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_white,
+#colorway_s09_black:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_black,
+#colorway_s09_light_gray:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_light_gray,
+#colorway_s09_dark_gray:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_dark_gray,
+#colorway_s09_dark_blue:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_dark_blue,
+#colorway_s09_green:checked ~ .colorways.s09_colorways .colorway_images.s09_image .s09_green,
+
+
+#colorway_zs_white:checked ~ .colorways.zs_colorways .colorway_images.zs_image .zs_white,
+#colorway_zs_black:checked ~ .colorways.zs_colorways .colorway_images.zs_image .zs_black,
+#colorway_zs_red:checked ~ .colorways.zs_colorways .colorway_images.zs_image .zs_red,
+#colorway_zs_gray:checked ~ .colorways.zs_colorways .colorway_images.zs_image .zs_gray,
+#colorway_zs_blue:checked ~ .colorways.zs_colorways .colorway_images.zs_image .zs_blue,
+
+#colorway_hs_gray:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_gray,
+#colorway_hs_white:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_white,
+#colorway_hs_black:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_black,
+#colorway_hs_red:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_red,
+#colorway_hs_dark_gray:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_dark_gray,
+#colorway_hs_navy_blue:checked ~ .colorways.hs_colorways .colorway_images.hs_image .hs_navy_blue{
+    display: block;
+}
+
+#catalog_model_malibu:checked ~ .catalog_models_button label[for="catalog_model_malibu"],
+#catalog_model_tracker:checked ~ .catalog_models_button label[for="catalog_model_tracker"],
+#catalog_model_onix:checked ~ .catalog_models_button label[for="catalog_model_onix"],
+#catalog_model_damas:checked ~ .catalog_models_button label[for="catalog_model_damas"],
+#catalog_model_cobalt:checked ~ .catalog_models_button label[for="catalog_model_cobalt"],
+#catalog_model_captiva:checked ~ .catalog_models_button label[for="catalog_model_captiva"],
+#catalog_model_x50:checked ~ .catalog_models_button label[for="catalog_model_x50"],
+#catalog_model_x70:checked ~ .catalog_models_button label[for="catalog_model_x70"],
+#catalog_model_t2:checked ~ .catalog_models_button label[for="catalog_model_t2"],
+#catalog_model_dashing:checked ~ .catalog_models_button label[for="catalog_model_dashing"],
+#catalog_model_s07:checked ~ .catalog_models_button label[for="catalog_model_s07"],
+#catalog_model_s09:checked ~ .catalog_models_button label[for="catalog_model_s09"],
+#catalog_model_zs:checked ~ .catalog_models_button label[for="catalog_model_zs"],
+#catalog_model_hs:checked ~ .catalog_models_button label[for="catalog_model_hs"]{
+    background-color: var(--red-text);
+    color: var(--white-text);
+}
+
+#colorway_mal_white:checked ~ .colorways.malibu_colorways div .tag label[for="colorway_mal_white"],  
+#colorway_mal_dark_gray:checked ~ .colorways.malibu_colorways div .tag label[for="colorway_mal_dark_gray"], 
+
+#colorway_tra_white:checked ~ .colorways.tracker_colorways div .tag label[for="colorway_tra_white"],
+#colorway_tra_gray:checked ~ .colorways.tracker_colorways div .tag label[for="colorway_tra_gray"],
+#colorway_tra_black:checked ~ .colorways.tracker_colorways div .tag label[for="colorway_tra_black"],
+#colorway_tra_dirty_blue:checked ~ .colorways.tracker_colorways div .tag label[for="colorway_tra_dirty_blue"],
+#colorway_tra_red:checked ~ .colorways.tracker_colorways div .tag label[for="colorway_tra_red"],
+
+#colorway_oni_white:checked ~ .colorways.onix_colorways div .tag label[for="colorway_oni_white"],
+#colorway_oni_light_gray:checked ~ .colorways.onix_colorways div .tag label[for="colorway_oni_light_gray"],
+#colorway_oni_black:checked ~ .colorways.onix_colorways div .tag label[for="colorway_oni_black"],
+#colorway_oni_dirty_blue:checked ~ .colorways.onix_colorways div .tag label[for="colorway_oni_dirty_blue"],
+#colorway_oni_gray:checked ~ .colorways.onix_colorways div .tag label[for="colorway_oni_gray"],
+
+#colorway_dam_white:checked ~ .colorways.damas_colorways div .tag label[for="colorway_dam_white"],
+#colorway_dam_dirty_blue:checked ~ .colorways.damas_colorways div .tag label[for="colorway_dam_dirty_blue"],
+#colorway_dam_dark_blue:checked ~ .colorways.damas_colorways div .tag label[for="colorway_dam_dark_blue"],
+
+#colorway_cob_white:checked ~ .colorways.cobalt_colorways div .tag label[for="colorway_cob_white"],
+#colorway_cob_black:checked ~ .colorways.cobalt_colorways div .tag label[for="colorway_cob_black"],
+#colorway_cob_blue:checked ~ .colorways.cobalt_colorways div .tag label[for="colorway_cob_blue"],
+#colorway_cob_metalic:checked ~ .colorways.cobalt_colorways div .tag label[for="colorway_cob_metalic"],
+#colorway_cob_red:checked ~ .colorways.cobalt_colorways div .tag label[for="colorway_cob_red"],
+
+#colorway_cap_white:checked ~ .colorways.captiva_colorways div .tag label[for="colorway_cap_white"],
+#colorway_cap_black:checked ~ .colorways.captiva_colorways div .tag label[for="colorway_cap_black"],
+#colorway_cap_gray:checked ~ .colorways.captiva_colorways div .tag label[for="colorway_cap_gray"],
+#colorway_cap_red:checked ~ .colorways.captiva_colorways div .tag label[for="colorway_cap_red"],
+
+
+#colorway_x50_white:checked ~ .colorways.x50_colorways div .tag label[for="colorway_x50_white"],
+#colorway_x50_black:checked ~ .colorways.x50_colorways div .tag label[for="colorway_x50_black"],
+#colorway_x50_light_gray:checked ~ .colorways.x50_colorways div .tag label[for="colorway_x50_light_gray"],
+#colorway_x50_gray:checked ~ .colorways.x50_colorways div .tag label[for="colorway_x50_gray"],
+#colorway_x50_sky_blue:checked ~ .colorways.x50_colorways div .tag label[for="colorway_x50_sky_blue"],
+
+#colorway_x70_white:checked ~ .colorways.x70_colorways div .tag label[for="colorway_x70_white"],
+#colorway_x70_black:checked ~ .colorways.x70_colorways div .tag label[for="colorway_x70_black"],
+#colorway_x70_sky_blue:checked ~ .colorways.x70_colorways div .tag label[for="colorway_x70_sky_blue"],
+#colorway_x70_light_gray:checked ~ .colorways.x70_colorways div .tag label[for="colorway_x70_light_gray"],
+#colorway_x70_gray:checked ~ .colorways.x70_colorways div .tag label[for="colorway_x70_gray"],
+
+#colorway_t2_white:checked ~ .colorways.t2_colorways div .tag label[for="colorway_t2_white"],
+#colorway_t2_black:checked ~ .colorways.t2_colorways div .tag label[for="colorway_t2_black"],
+#colorway_t2_gray:checked ~ .colorways.t2_colorways div .tag label[for="colorway_t2_gray"],
+#colorway_t2_light_gray:checked ~ .colorways.t2_colorways div .tag label[for="colorway_t2_light_gray"],
+#colorway_t2_ochre:checked ~ .colorways.t2_colorways div .tag label[for="colorway_t2_ochre"],
+
+#colorway_das_white:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_white"],
+#colorway_das_black:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_black"],
+#colorway_das_sky_blue:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_sky_blue"],
+#colorway_das_cherry_red:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_cherry_red"],
+#colorway_das_light_gray:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_light_gray"],
+#colorway_das_dark_gray:checked ~ .colorways.dashing_colorways div .tag label[for="colorway_das_dark_gray"],
+
+
+#colorway_s07_light_gray:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_light_gray"],
+#colorway_s07_white:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_white"],
+#colorway_s07_sky_blue:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_sky_blue"],
+#colorway_s07_brown:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_brown"],
+#colorway_s07_gray:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_gray"],
+#colorway_s07_navy_blue:checked ~ .colorways.s07_colorways div .tag label[for="colorway_s07_navy_blue"],
+
+#colorway_s09_white:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_white"],
+#colorway_s09_black:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_black"],
+#colorway_s09_light_gray:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_light_gray"],
+#colorway_s09_dark_gray:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_dark_gray"],
+#colorway_s09_dark_blue:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_dark_blue"],
+#colorway_s09_green:checked ~ .colorways.s09_colorways div .tag label[for="colorway_s09_green"],
+
+
+#colorway_zs_white:checked ~ .colorways.zs_colorways div .tag label[for="colorway_zs_white"],
+#colorway_zs_black:checked ~ .colorways.zs_colorways div .tag label[for="colorway_zs_black"],
+#colorway_zs_red:checked ~ .colorways.zs_colorways div .tag label[for="colorway_zs_red"],
+#colorway_zs_gray:checked ~ .colorways.zs_colorways div .tag label[for="colorway_zs_gray"],
+#colorway_zs_blue:checked ~ .colorways.zs_colorways div .tag label[for="colorway_zs_blue"],
+
+#colorway_hs_gray:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_gray"],
+#colorway_hs_white:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_white"],
+#colorway_hs_black:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_black"],
+#colorway_hs_red:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_red"],
+#colorway_hs_dark_gray:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_dark_gray"],
+#colorway_hs_navy_blue:checked ~ .colorways.hs_colorways div .tag label[for="colorway_hs_navy_blue"]{
+    border: 2px solid var(--red-text);
+}
+
+.telegram_channel{
+    background-color: var(--gray-element);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 28px;
+}
+
+.subscription{
+    width: 912px;
+    height: 270px;
+    background-color: var(--white-text);
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    font-family: interM;
+    padding: 48px;
+}
+
+.subscription h1{
+    font-size: var(--heading-font-s);
+    margin-bottom: 15px;
+}
+
+.subscription p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.subscription button{
+    border: var(--border-button-m) var(--red-text);
+    border-radius: var(--border-radius-button);
+    background-color: var(--white-text);
+    color: var(--red-text);
+    padding: var(--button-padding-n);
+    font-size: 18px;
+    font-family: interM;
+    cursor: pointer;
+}
+
+.qr_code{
+    display: flex;
+    align-items: center;
+}
+
+.qr_code img{
+    width: 912px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.calculator_block{
+    display: flex;
+    justify-content: center;
+    padding: 32px 28px;
+    font-family: interM;
+}
+
+.calculator_block>div{
+    width: 900px;
+    height: 533px;
+    border-radius: var(--border-radius-s);
+    margin: 36px 12px;
+    padding: 48px;
+}
+
+.calculator_block>div h1{
+    font-size: var(--heading-font-s);
+    margin: 12px 0;
+}
+
+.calculator{
+    background-color: var(--gray-element);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calculator_heading{
+    margin-bottom: 10px;
+}
+
+.input_calculator{
+    width: 805px;
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.input>div {
+    display: flex;
+}
+
+.input input{
+    width: 310px;
+    height: 65px;
+    border: none;
+    border-top-left-radius: var(--border-radius-t);
+    border-bottom-left-radius: var(--border-radius-t);
+    padding: 21px 24px;
+    font-size: 18px;
+    font-family: interM;
+    background-color: var(--translucent-element);
+}
+
+.input label{
+    background-color: var(--translucent-element);
+    width: 85px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: var(--border-radius-t);
+    border-bottom-right-radius: var(--border-radius-t);
+    cursor: pointer;
+}
+
+.month{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.month p{
+    width: 70px;
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    font-size: var(--minimal-font-s);
+}
+
+.month-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--translucent-element);
+    color: rgba(38, 38, 39, 1);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.month-btn.active{
+    color: rgba(38, 38, 39, 1);
+    border: var(--border-button-m) var(--black-text);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#call{
+    border: var(--border-button-m) var(--black-text);
+    border-radius: var(--border-radius-button);
+    padding: var(--button-padding-n);
+    width: 235px;
+    background-color: var(--translucent-element);
+    font-size: 18px;
+    cursor: pointer;
+    font-family: interM;
+}
+
+.calculator_foot {
+    width: 805px;
+    margin-top: 20px;
+}
+
+.calculator_foot > div {
+    display: flex;
+    justify-content: space-between;
+    color: var(--black-text);
+}
+
+.calculator_foot > div > p {
+    font-size: var(--heading-font-s);
+    font-weight: bold;
+}
+
+#monthly_result {
+    font-size: var(--heading-font-s);
+    font-weight: bold;
+}
+
+.calculator_foot > p {
+    font-size: var(--minimal-font-s);
+    margin: 0;
+}
+
+.connection{
+    background-color: var(--red-text);
+}
+
+.connection>div{
+    width: 805px;
+    line-height: normal;
+}
+
+.connection p,
+.connection h1,
+.connection a{
+    color: var(--white-text);
+}
+
+.connection a{
+    text-decoration: underline;
+}
+
+.connection_heading{
+    margin-bottom: 30px;
+}
+
+.input_connection>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.input_connection>div>svg{
+    width: 65px;
+    height: 65px;
+    padding: 24px;
+    color: var(--white-text);
+    background-color: var(--translucent-element);
+    border-radius: var(--border-radius-t)
+}
+
+.input_connection>div>input{
+    color: var(--white-text);
+    width: 720px;
+    border: none;
+    border-radius: var(--border-radius-t);
+    padding: var(--form-padding-n);
+    font-size: var(--normal-font-s);
+    font-family: interM;
+    background-color: var(--translucent-element);
+}
+
+.input_connection>div>input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input_connection>div>input:focus{
+    outline: none;
+}
+
+.select{
+    position: relative;
+    width: 720px;
+    height: 65px;
+}
+
+.select input[type="checkbox"],
+.select input[type="radio"]{
+    display: none;
+}
+
+.headerr{
+    padding: 21px 24px;
+    border-radius: var(--border-radius-t);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--normal-font-s);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--translucent-element);
+}
+
+.headerr>svg{
+    transition: transform 0.5s;
+}
+
+#openToggle:checked+.headerr>svg{
+    transform: rotate(180deg);
+}
+
+.options{
+    display: none;
+    position: relative;
+    margin-top: 16px;
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-t);
+    overflow: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    width: 720px;
+    height: 200px;
+}
+
+#openToggle:checked ~ .options{
+    display: block;
+}
+
+.options label{
+    padding: 15px 24px;
+    font-size: var(--normal-font-s);
+    display: block;
+}
+
+.value{
+    display: none;
+}
+
+#tashkent:checked ~ .headerr .v_1,
+#tashkent_obl:checked ~ .headerr .v_2,
+#syrdarya_obl:checked ~ .headerr .v_3,
+#fergana_obl:checked ~ .headerr .v_4{
+    display: inline;
+    color: var(--white-text);
+}
+
+#tashkent:checked ~ .options label[for="tashkent"],
+#tashkent_obl:checked ~ .options label[for="tashkent_obl"],
+#syrdarya_obl:checked ~ .options label[for="syrdarya_obl"],
+#fergana_obl:checked ~ .options label[for="fergana_obl"]{
+    background-color: var(--black-text);
+    color: var(--white-text);
+}
+
+#tashkent:checked ~ .headerr .placeholder,
+#tashkent_obl:checked ~ .headerr .placeholder,
+#syrdarya_obl:checked ~ .headerr .placeholder,
+#fergana_obl:checked ~ .headerr .placeholder{
+    display: none;
+}
+
+.connection_foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connection_foot a{
+    font-size: var(--small-font-s);
+    margin-bottom: 20px;
+}
+
+.connection_foot button{
+    padding: var(--button-padding-n);
+    background-color: var(--white-text);
+    color: var(--red-text);
+    border: none;
+    border-radius: var(--border-radius-button);
+    font-size: 18px;
+    font-family: interM;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    padding: 40px;
+    height: 655px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: interM;
+}
+
+.footer_background{
+    background-color: var(--gray-element);
+    width: 100%;
+    height: 555px;
+    border-radius: var(--border-radius-s);
+    padding: 56px 48px;
+}
+
+.top_side{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_contact{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--normal-font-s);
+}
+
+.footer_contact>div{
+    margin: 20px 0;
+}
+
+.left_side{
+    width: 1070px;
+}
+
+.left_side>svg{
+    color: var(--black-text);
+}
+
+.right_side>div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.right_side>div>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.right_side>div>div>a{
+    width: 150px;
+    margin: 12px 0;
+}
+
+.footer_social_media a{
+    padding: 12px 25px;
+}
+
+.right_side a{
+    color: var(--black-text);
+}
+
+.right_side a svg{
+    width: 18px;
+    height: 18px;
+}
+
+.copyrighted{
+    display: flex;
+    justify-content: center;
+}
+
+.copyrighted p{
+    font-size: 10px;
+    text-align: center;
+    width: 1240px;
+    color: var(--gray-text);
+    line-height: 150%;
+}
+
+.modal{
+    font-family: interM;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+}
+
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal_content{
+    background-color: var(--white-text);
+    padding: 28px;
+    width: 700px;
+    height: 400px;
+    padding: 55px 48px;
+    border-radius: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+
+.modal_content a{
+    background-color: var(--red-text);
+    border-radius: var(--border-radius-button);
+    color: var(--white-text);
+    padding: var(--button-padding-s);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal_content p{
+    color: var(--black-text);
+    font-size: 18px;
+    font-weight: bold;
+    width: 600px;
+    line-height: 150%;
+    margin: 0;
+}
+
+.modal_content h2{
+    color: var(--black-text);
+    font-size: 32px;
+    line-height: 130%;
+}
+
+.modal.active .modal_content{
+    transform: translateY(0);
+}
+
+.modal_close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,368 @@
+main{
+    font-family: interM;
+}
+
+.hero_block_main_service{
+    background-image: url("../images/service_1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:  cover;
+    height: 730px;
+    width: 100%;
+}
+
+.mechanical_workshop_block{
+    margin-top: 50px;
+    width: 100%;
+    padding: 72px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mechanical_workshop_heading{
+    width: 100%;
+}
+
+.mechanical_workshop_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.mechanical_workshop_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mechanical_workshop_main_left{
+    border-radius: var(--border-radius-n);
+    overflow: hidden;
+}
+
+.mechanical_workshop_main_left input{
+    display: none;
+}
+
+.mechanical_workshop_slider{
+    width: 900px;
+    height: 745px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide_wrapper_ser{
+    transform: translateX(0);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 1800px;
+    height: 100%;
+    display: flex;
+    border-radius: var(--border-radius-n);
+}
+
+.slide_ser{
+    border-radius: var(--border-radius-n);
+    width: 100%;
+    height: 900px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+}
+
+.slide_1_ser{
+    background-image: url("../images/service_2.png");
+}
+.slide_2_ser{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68976f0961982.png");
+}
+
+.navigation_ser{
+    right: 40px;
+    bottom: 40px;
+    position: absolute;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#mechanical_workshop_1:checked ~ .slide_wrapper_ser{
+    transform: translateX(0);
+}
+
+#mechanical_workshop_2:checked ~ .slide_wrapper_ser{
+    transform: translateX(-900px);
+}
+
+.slide_counter_ser::after {
+    content: '1/2';
+}
+
+#mechanical_workshop_1:checked ~ .navigation_ser .slide_counter_ser::after{
+    content: '1/2';
+}
+
+#mechanical_workshop_2:checked ~ .navigation_ser .slide_counter_ser::after{
+    content: '2/2';
+}
+
+.nav_button_ser{
+    display: none;
+}
+
+#mechanical_workshop_1:checked ~ .navigation_ser .nav_button_ser.nav_right_ser.to_slide_1_right_ser,
+#mechanical_workshop_1:checked ~ .navigation_ser .nav_button_ser.nav_left_ser.to_slide_1_left_ser{
+    display: flex;
+}
+
+#mechanical_workshop_2:checked ~ .navigation_ser .nav_button_ser.nav_left_ser.to_slide_2_left_ser, 
+#mechanical_workshop_2:checked ~ .navigation_ser .nav_button_ser.nav_right_ser.to_slide_2_right_ser{
+    display: flex;
+}
+
+.mechanical_workshop_main_right{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 900px;
+}
+
+.mechanical_workshop_main_right>:first-child{
+    height: 210px;
+}
+
+.mechanical_workshop_main_right>:last-child{
+    height: 510px;
+}
+
+.mechanical_workshop_main_right>div{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: var(--border-radius-n);
+    padding: 40px;
+    background-color: var(--gray-element);
+}
+
+.mechanical_workshop_main_right>div>h2{
+    font-size: var(--heading-font-n);
+    color: var(--red-text);
+}
+
+.mechanical_workshop_main_right>div>div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mechanical_workshop_main_right>div>div>h3{
+    color: var(--black-text);
+    font-size: 18px;
+}
+
+.mechanical_workshop_main_right>div>p,
+.mechanical_workshop_main_right>div>div>p{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+}
+
+.professionalism_block{
+    width: 100%;
+    padding: 40px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.professionalism_block h1{
+    font-size: var(--heading-font-n);
+    line-height: 150%;
+    width: 600px;
+}
+
+.professionalism_block p{
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+    color: var(--gray-text);
+    width: 840px;
+}
+
+.detailing_block{
+    margin-top: 50px;
+    width: 100%;
+    padding: 72px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.detailing_heading{
+    width: 100%;
+}
+
+.detailing_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.detailing_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detailing_main_left{
+    border-radius: var(--border-radius-n);
+    overflow: hidden;
+}
+
+.detailing_main_left input{
+    display: none;
+}
+
+.detailing_slider{
+    width: 900px;
+    height: 690px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide_wrapper_det{
+    transform: translateX(0);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 1800px;
+    height: 100%;
+    display: flex;
+    border-radius: var(--border-radius-n);
+}
+
+.slide_det{
+    border-radius: var(--border-radius-n);
+    width: 100%;
+    height: 900px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+}
+
+.slide_1_det{
+    background-image: url("../images/service_4.png");
+}
+.slide_2_det{
+    background-image: url("https://uznews.uz/storage/uploads/68/0f/6f/file_680f6fad102bd_orig.jpg");
+}
+
+.navigation_det{
+    right: 40px;
+    bottom: 40px;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#detailing_1:checked ~ .slide_wrapper_det{
+    transform: translateX(0);
+}
+
+#detailing_2:checked ~ .slide_wrapper_det{
+    transform: translateX(-900px);
+}
+
+.slide_counter_det::after {
+    content: '1/2';
+}
+
+#detailing_1:checked ~ .navigation_det .slide_counter_det::after{
+    content: '1/2';
+}
+
+#detailing_2:checked ~ .navigation_det .slide_counter_det::after{
+    content: '2/2';
+}
+
+.nav_button_det{
+    display: none;
+}
+
+#detailing_1:checked ~ .navigation_det .nav_button_det.nav_right_det.to_slide_1_right_det,
+#detailing_1:checked ~ .navigation_det .nav_button_det.nav_left_det.to_slide_1_left_det{
+    display: flex;
+}
+
+#detailing_2:checked ~ .navigation_det .nav_button_det.nav_left_det.to_slide_2_left_det, 
+#detailing_2:checked ~ .navigation_det .nav_button_det.nav_right_det.to_slide_2_right_det{
+    display: flex;
+}
+
+.detailing_main_right{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.detailing_main_right>div{
+    background-color: var(--gray-element);
+    border-radius: var(--border-radius-n);
+    padding: 40px;
+}
+
+.detailing_main_right>:first-child{
+    height: 430px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.detailing_main_right>:last-child{
+    height: 235px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detailing_main_right>div>div{
+    width: 31%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detailing_main_right>div>div>h3{
+    color: var(--red-text);
+    font-size: var(--heading-font-s);
+}
+
+.detailing_main_right>div>div>p{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+}
+
+.detailing_main_right>:last-child>h3{
+    font-size: var(--heading-font-s);
+}
+
+.detailing_main_right>:last-child ul{
+    margin-left: 30px;
+}
+
+.detailing_main_right>:last-child li{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+}

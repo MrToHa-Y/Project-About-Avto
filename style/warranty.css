@@ -1,0 +1,426 @@
+main{
+    font-family: interM;
+}
+
+.hero_block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_block_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 120px 48px 64px 48px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_block_heading h1{
+    font-size: var(--heading-font-n);
+}
+
+.hero_block_heading p{
+    font-size: var(--normal-font-s);
+    color:  var(--gray-text);
+    line-height: 150%;
+    width: 750px;
+}
+
+.hero_block_main{
+    width: 100%;
+    background-image: url("../images/hero_warranty.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 730px;
+}
+
+.information_about_warranty_block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 72px 40px;
+    margin-top: 50px;
+}
+
+.information_about_warranty_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.information_about_warranty_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.information_about_warranty_heading h1{
+    font-size: var(--heading-font-n);
+}
+
+.information_about_warranty_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.information_about_warranty_main>div{
+    width: 590px;
+    height: 680px;
+    border-radius: var(--border-radius-n);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px 25px;
+}
+
+.information_about_warranty_main>div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    border-radius: var(--border-radius-n);
+    z-index: 0;
+}
+
+.information_about_warranty_main>div>h1{
+    font-size: var(--heading-font-n);
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 1;
+    line-height: 120%;
+}
+
+.manufacturer{
+    background-image: url("../images/information_about_warranty_1.jpg");
+}
+
+.body{
+    background-image: url("../images/information_about_warranty_2.jpg");
+}
+
+.spare_part{
+    background-image: url("../images/information_about_warranty_3.jpg");
+}
+
+.car_info{
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-n);
+    padding: 32px;
+    width: 545px;
+    height: 240px;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    right: 23px;
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 0.5s;
+}
+
+.manufacturer:hover .card_1,
+.body:hover .card_2,
+.spare_part:hover .card_3{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.car_info h2{
+    font-size: var(--heading-font-s);
+    line-height: 150%;
+}
+
+.car_info p{
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.details_block{
+    width: 100%;
+    padding: 72px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.accordion input[type="checkbox"]{
+    display: none;
+}
+
+.accordion{
+    width: 1240px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--border-radius-s);
+    padding: 29px;
+    background-color: var(--gray-element);
+}
+
+.accordion_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius-t);
+    background-color: var(--gray-element);
+    user-select: none;
+}
+
+.accordion_header h3{
+    font-size: var(--heading-font-s);
+}
+
+.accordion_header svg{
+    width: 34px;
+    height: 34px;
+    padding: 8.50px;
+    border-radius: 60px;
+    background-color: var(--gray-element);
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.accordion_content{
+    max-height: 0;
+    opacity: 0.5;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.accordion_content_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 0 0 0;
+}
+
+.accordion_content_inner p{
+    color: var(--gray-text);
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.accordion_content_inner ul{
+    margin-left: 40px;
+    list-style: circle;
+}
+
+.accordion_content_inner li{
+    color: var(--gray-text);
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.accordion input[type="checkbox"]:checked ~ .accordion_header svg{
+    transform: rotate(45deg);
+}
+
+.accordion input[type="checkbox"]:checked ~ .accordion_content{
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.warranty_forms_block{
+    width: 100%;
+    padding: 72px 40px;
+    margin-top: 50px;
+}
+
+.warranty_background{
+    width: 100%;
+    background-color: var(--gray-element);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    border-radius: var(--border-radius-s);
+    padding: 72px 48px;
+}
+
+.warranty_forms_heading{
+    width: 805px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.warranty_forms_heading h2{
+    font-size: var(--heading-font-s);
+}
+
+.warranty_forms_heading p{
+    font-size: 18px;
+}
+
+.warranty_forms_main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.warranty_forms{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.warranty_forms>div{
+    display: flex;
+    gap: 16px;
+}
+
+.warranty_forms>div>svg{
+    width: 68px;
+    height: 68px;
+    padding: 24px;
+    color: var(--black-text);
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-t);
+}
+
+.warranty_forms>div>input{
+    padding: 24px;
+    height: 68px;
+    font-size: var(--normal-font-s);
+    font-family: interM;
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+    width: 720px;
+    border: transparent;
+}
+
+.warranty_forms>div>input::placeholder{
+    color: var(--black-text);
+}
+
+.warranty_forms>div>input:focus{
+    border: transparent;
+    outline: none;
+}
+
+.location_war input[type="checkbox"],
+.location_war input[type="radio"]{
+    display: none;
+}
+
+.select_war{
+    width: 720px;
+    height: 68px;
+    position: relative;
+}
+
+.headerr_war{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 720px;
+    padding: 24px;
+    height: 68px;
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-t);
+}
+
+.value_war{
+    display: none;
+}
+
+.headerr_war>svg{
+    transition: transform 0.5s ease;
+}
+
+.options_war{
+    background-color: var(--white-text);
+    width: 720px;
+    height: 200px;
+    margin-top: 16px;
+    position: relative;
+    display: none;
+    border-radius: var(--border-radius-t);
+    z-index: 1001;
+    overflow: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
+.opt_label_war{
+    display: block;
+    font-size: var(--normal-font-s);
+    padding: 15px 24px;
+}
+
+#openToggle_war:checked+.headerr_war>svg{
+    transform: rotate(180deg);
+}
+
+#tashkent_war:checked ~ .headerr_war .c_1_war,
+#tashkent_obl_war:checked ~ .headerr_war .c_2_war,
+#syrdarya_obl_war:checked ~ .headerr_war .c_3_war,
+#fergana_obl_war:checked ~ .headerr_war .c_4_war{
+    display: inline;
+}
+
+#tashkent_war:checked ~ .headerr_war .placeholder_war,
+#tashkent_obl_war:checked ~ .headerr_war .placeholder_war,
+#syrdarya_obl_war:checked ~ .headerr_war .placeholder_war,
+#fergana_obl_war:checked ~ .headerr_war .placeholder_war{
+    display: none;
+}
+
+#openToggle_war:checked ~ .options_war{
+    display: block;
+}
+
+#tashkent_war:checked ~ .options_war label[for="tashkent_war"],
+#tashkent_obl_war:checked ~ .options_war label[for="tashkent_obl_war"],
+#syrdarya_obl_war:checked ~ .options_war label[for="syrdarya_obl_war"],
+#fergana_obl_war:checked ~ .options_war label[for="fergana_obl_war"]{
+    background-color: var(--black-text);
+    color: var(--white-text);
+}
+
+.warranty_forms_foot{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.warranty_forms_foot a{
+    color: var(--black-text);
+    text-decoration: underline;
+    font-size: var(--small-font-s);
+}
+
+.warranty_forms_foot button{
+    border: var(--border-button-m) var(--black-text);
+    border-radius: var(--border-radius-button);
+    padding: 24px 40px;
+    color: var(--black-text);
+    font-size: 18px;
+    font-family: interM;
+    text-align: center;
+    background-color: var(--white-text);
+    cursor: pointer;
+}

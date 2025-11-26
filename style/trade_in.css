@@ -1,0 +1,488 @@
+main{
+    font-family: interM;
+}
+
+.hero_block{
+    width: 100%;
+    height: 970px;
+    background-color: rgba(38, 38, 39, 1);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_block div{
+    width: 50%;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_block>:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+}
+
+.hero_block>:first-child h1{
+    font-size: var(--heading-font-n);
+    line-height: 150%;
+    color: rgba(255, 255, 255, 1);
+    width: 720px;
+}
+
+.hero_block>:first-child p{
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(94, 94, 94, 1);
+    width: 720px;
+}
+
+.hero_block>:first-child a{
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(38, 38, 39, 1);
+    font-size: 18px;
+    border-radius: var(--border-radius-button);
+    padding: 24px 40px;
+    width: 210px;
+}
+
+.hero_block>:last-child{
+    background-image: url("../images/trade_in_hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-s);
+    width: 990px;
+    height: 895px;
+}
+
+.workflow_block{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.workflow_heading h1{
+    font-size: var(--heading-font-s);
+}
+
+.workflow_main{
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.workflow_main>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    color: var(--black-text);
+    background-color: var(--gray-element);
+    border-radius: var(--border-radius-t);
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 240px;
+    height: 110px;
+}
+
+#end{
+    background-color: var(--red-text);
+}
+
+#end>p{
+    color: var(--white-text);
+}
+
+#end>svg{
+    color: var(--white-text);
+}
+
+.workflow_main>svg{
+    color: var(--black-text);
+}
+
+.workflow_main>div>p{
+    font-size: 18px;
+    color: var(--black-text);
+}
+
+.trade_in_form_block{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 64px;
+}
+
+.trade_in_form_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.trade_in_form_heading p{
+    font-size: var(--normal-font-s);
+    color: var(--red-text);
+}
+
+.trade_in_form_heading h1{
+    font-size: var(--heading-font-n);
+    color: var(--black-text);
+}
+
+.trade_in_form_main{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.trade_in_form_main>:first-child{
+    background-image: url("../images/trade_in_forms.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-n);
+    width: 620px;
+    height: 770px;
+}
+
+.trade_in_form_main>:last-child{
+    background-color: var(--gray-element);
+    border-radius: var(--border-radius-n);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 40px;
+    width: 1180px;
+    height: 770px;
+}
+
+.trade_in_form_main>:last-child h2{
+    font-size: var(--heading-font-s);
+    line-height: 150%;
+}
+
+.trade_in_form_main>:last-child p{
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+}
+
+.trade_in_foms{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trade_in_foms>div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.trade_in_foms>div>svg{
+    width: 68px;
+    height: 68px;
+    border-radius: var(--border-radius-t);
+    padding: 24px;
+    background-color: var(--translucent-element);
+}
+
+.trade_in_foms>div>input{
+    width: 1020px;
+    border-radius: var(--border-radius-t);
+    padding: 23px;
+    background-color: var(--translucent-element);
+    font-size: var(--normal-font-s);
+    font-family: interM;
+    border: none;
+}
+
+.trade_in_foms>div>input::placeholder{
+    color: var(--black-text);
+}
+
+.trade_in_foms>div>input:focus{
+    border: transparent;
+    outline: none;
+}
+
+.select_tra{
+    width: 1020px;
+    height: 66px;
+    position: relative;
+}
+
+.select_tra input[type="radio"],
+.select_tra input[type="checkbox"]{
+    display: none;
+}
+
+.headerr_tra{
+    width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--normal-font-s);
+    padding: 23px;
+    background-color: var(--translucent-element);
+    border-radius: var(--border-radius-t);
+}
+
+.value_tra{
+    display: none;
+}
+
+.headerr_tra>svg{
+    transition: transform 0.25s;
+}
+
+.options_tra{
+    display: none;
+    margin-top: 16px;
+    position: relative;
+    width: 1020px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+    z-index: 1001;   
+}
+
+#openToggle_tra:checked ~ .options_tra{
+    display: block;    
+}
+
+#openToggle_tra:checked + .headerr_tra>svg{
+    transform: rotate(180deg);
+}
+
+#tashkent_tra:checked ~ .headerr_tra .placeholder_tra,
+#tashkent_obl_tra:checked ~ .headerr_tra .placeholder_tra,
+#syrdarya_obl_tra:checked ~ .headerr_tra .placeholder_tra,
+#fergana_obl_tra:checked ~ .headerr_tra .placeholder_tra{
+    display: none;
+}
+
+#tashkent_tra:checked ~ .headerr_tra .c_1_tra,
+#tashkent_obl_tra:checked ~ .headerr_tra .c_2_tra,
+#syrdarya_obl_tra:checked ~ .headerr_tra .c_3_tra,
+#fergana_obl_tra:checked ~ .headerr_tra .c_4_tra{
+    display: inline;
+}
+
+#tashkent_tra:checked ~ .options_tra label[for="tashkent_tra"],
+#tashkent_obl_tra:checked ~ .options_tra label[for="tashkent_obl_tra"],
+#syrdarya_obl_tra:checked ~ .options_tra label[for="syrdarya_obl_tra"],
+#fergana_obl_tra:checked ~ .options_tra label[for="fergana_obl_tra"]{
+    background-color: var(--black-text);
+    color: var(--white-text);
+}
+
+.opt_label_tra{
+    display: block;
+    font-size: var(--normal-font-s);
+    padding: 15px 24px;
+}
+
+.trade_in_foms_foot{
+    width: 100%;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.trade_in_foms_foot a{
+    color: var(--black-text);
+    font-size: var(--small-font-s);
+    text-decoration: underline;
+}
+
+.trade_in_foms_foot form button{
+    padding: 24px 40px;
+    border-radius: var(--border-radius-button);
+    border: var(--border-button-m) var(--black-text);
+    font-family: interM;
+    font-size: 18px;
+    background-color: var(--white-text);
+} 
+
+.faq_block{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+    background-color: var(--gray-element);
+}
+
+.faq_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+    padding: 48px 0;
+    width: 100%;
+}
+
+.faq_heading div{
+    color: var(--black-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.faq_heading div img{
+    width: 28px;
+}
+
+.faq_heading div p{
+    font-size: var(--normal-font-s);
+    color: var(--gray-text);
+}
+
+.faq_heading hr{
+    width: 1px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.faq_main{
+    display: flex;
+    gap: 120px;
+    margin-bottom: 120px;
+}
+
+.faq_main>:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 390px;
+}
+
+.faq_main>:first-child>p{
+    font-size: var(--normal-font-s);
+    color: var(--gray-text);
+}
+
+.faq_main>:first-child>h1{
+    font-size: 80px;
+    color: var(--black-text);
+}
+
+.faq_main>:first-child>a{
+    font-size: var(--normal-font-s);
+    color: var(--black-text);
+    border: var(--border-button-m) var(--black-text);
+    border-radius: var(--border-radius-button);
+    background-color: var(--white-text);
+    padding: 24px 40px;
+    width: 205px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.5s ease-out;
+}
+
+.faq_main>:first-child>a::after{
+    content: '→';
+    position: absolute;
+    right: 30px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.5s ease;
+    transform: translateX(10px);
+}
+
+.faq_main>:first-child>a:hover{
+    width: 212px;
+}
+
+.faq_main>:first-child>a:hover::after{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.accordion_block{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1320px;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--white-text);
+    border-radius: var(--border-radius-s);
+    padding: 29px;
+}
+
+.accordion input[type="checkbox"]{
+    display: none;
+}
+
+.accordion_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+    user-select: none;
+}
+
+.accordion_header h3{
+    font-size: 18px;
+}
+
+.accordion_header svg{
+    width: 34px;
+    height: 34px;
+    color: var(--red-text);
+    padding: 8.50px;
+    border-radius: 60px;
+    background-color: var(--gray-element);
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.accordion_content{
+    max-height: 0;
+    opacity: 0.5;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.accordion_content_inner{
+    padding: 32px 0 0 0;
+}
+
+.accordion input[type="checkbox"]:checked ~ .accordion_header svg{
+    transform: rotate(45deg);
+}
+
+.accordion input[type="checkbox"]:checked ~ .accordion_content{
+    max-height: 100px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}

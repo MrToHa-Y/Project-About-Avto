@@ -1,0 +1,655 @@
+main{
+    font-family: interM;
+}
+
+.hero_main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_main div{
+    width: 100%;
+    padding: 120px 48px 64px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_main div h1{
+    font-size: var(--heading-font-n);
+}
+
+.hero_main div p{
+    font-size: var(--normal-font-s);
+    width: 1150px;
+    color: var(--gray-text);
+}
+
+.hero_main img{
+    width: 100%;
+    height: 730px;
+}
+
+.manuals_model_block{
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manuals_model_heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    margin: 80px 0 60px 0;
+}
+
+.manuals_model_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.manuals_model_heading h1{
+    font-size: var(--heading-font-n);
+    line-height: 150%;
+}
+
+.manuals_model_main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.image_manual>div{
+    width: 900px;
+    height: 405px;
+    border-radius: var(--border-radius-s);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden_image{
+    display: none;
+}
+
+.malibu_image_man,
+.empty_image_man{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/689848ad4d0e1.jpg");
+}
+
+.tracker_image_man{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68a55b2f8d524.jpg");
+}
+
+.onix_image_man{
+    background-image: url("../images/onix_manual.jpg");
+}
+
+.damas_image_man{
+    background-image: url("https://chevrolet.uz/assets/images/damas/damas-uz.webp");
+}
+
+.cobalt_image_man{
+    background-image: url("../images/cobalt_manual.jpg");
+}
+
+.captiva_image_man{
+    background-image: url("../images/captiva_manual.avif");
+}
+
+.x50_image_man{
+    background-image: url("../images/x50_manual.jpg");
+}
+
+.x70_image_man{
+    background-image: url("../images/x70_manual.jpg");
+}
+
+.t2_image_man{
+    background-image: url("../images/t2_manual.jpg");
+}
+
+.dashing_image_man{
+    background-image: url("https://jetourja.com/wp-content/uploads/2024/08/Jetour_Dashing2-e1723758384621.webp");
+}
+
+.s07_image_man{
+    background-image: url("https://avatars.mds.yandex.net/get-vertis-journal/4212087/Soueast_S07_011.jpg_1739253620325/orig");
+}
+
+.s09_image_man{
+    background-image: url("../images/s09_manual.png");
+}
+
+.zs_image_man{
+    background-image: url("https://strg2.autovsalone.ru/neofiles/serve-image/664ed57f87cd5d000739d966/1190x500/q90");
+}
+
+.manuals_form{
+    padding: 72px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 50%;
+    height: 405px;
+    border-radius: var(--border-radius-s);
+    background-color: var(--gray-element);
+}
+
+.manuals_model_main input{
+    display: none;
+}
+
+.brand_form,
+.model_forms{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.form_number{
+    font-size: var(--normal-font-s);
+    color: var(--black-text);
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+    padding: 24px;
+    height: 68px;
+}
+
+.select_model,
+.select_brand{
+    position: relative;
+    height: 68px;
+}
+
+.hidden_form{
+    display: none;
+}
+
+.headerr_brand,
+.headerr_model_all,
+.headerr_model{
+    padding: var(--form-padding-n);
+    width: 720px;
+    border-radius: var(--border-radius-t);
+    color: var(--black-text);
+    font-size: var(--normal-font-s);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-text);
+}
+
+.headerr_brand svg,
+.headerr_model_all svg,
+.headerr_model svg{
+    transition: transform .15s;
+}
+
+.scrollbar{
+    background-color: var(--white-text);
+    margin-top: 16px; 
+    border-radius: var(--border-radius-t);
+    display: none;
+    width: 720px;
+    position: relative;
+    z-index: 1000;
+}
+
+.options_bra,
+.options_mod_all,
+.options_mod{
+    overflow-y: scroll; 
+    overflow-x: hidden;            
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    width: 710px;
+    height: 150px;
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-t);
+}
+
+.options_bra::-webkit-scrollbar,
+.options_mod_all::-webkit-scrollbar,
+.options_mod::-webkit-scrollbar{
+    width: 4px;
+}
+
+.options_bra::-webkit-scrollbar-track,
+.options_mod_all::-webkit-scrollbar-track,
+.options_mod::-webkit-scrollbar-track{
+    background: var(--gray-element);
+    border-radius: 10px; 
+    margin: 20px 0;      
+}
+ 
+.options_bra::-webkit-scrollbar-thumb,
+.options_mod_all::-webkit-scrollbar-thumb,
+.options_mod::-webkit-scrollbar-thumb{
+    background: var(--black-text);        
+    border-radius: 10px;
+    margin-right: 30px;
+    min-height: 40px;           
+}
+
+.models_soueast{
+    height: 100px;
+}
+
+.models_mg{
+    height: 50px;
+}
+
+.options_bra label,
+.options_mod_all label,
+.options_mod label{
+    width: 697px;
+    height: 50px;
+    padding: 15px 24px;
+    font-size: var(--normal-font-s);
+    display: block;
+    color: rgb(125, 125, 125);
+    will-change: font-size;
+    transition: font-size 0.45s ease;
+}
+
+.options_bra label:hover,
+.options_mod_all label:hover,
+.options_mod label:hover{
+    color: var(--black-text);
+    font-size: 20px;
+}
+
+
+.value_bra,
+.value_mod_all,
+.value_mod{
+    display: none;
+}
+
+.open_bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download_manuals{
+    gap: 8px;
+    display: flex;
+}
+
+.hidden_button{
+    display: none;
+}
+
+.download_manuals a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--button-padding-n);
+    font-size: 18px;
+    color: var(--red-text);
+    border-radius: var(--border-radius-button);
+}
+
+.download_manuals>:first-child{
+    border: var(--border-button-m) var(--red-text);
+    background-color: var(--white-text);
+}
+
+.download_manuals>:last-child img{
+    width: 19px;
+}
+
+#openToggle_brand:checked+.headerr_brand>svg,
+#openToggle_model_all:checked+.headerr_model_all>svg,
+#openToggle_model_chevrolet:checked+.headerr_model.chevrolet_headerr>svg,
+#openToggle_model_jetour:checked+.headerr_model.jetour_headerr>svg,
+#openToggle_model_soueast:checked+.headerr_model.soueast_headerr>svg,
+#openToggle_model_mg:checked+.headerr_model.mg_headerr>svg{
+    transform: rotate(180deg);
+}
+
+#openToggle_model_all:checked ~ .scrollbar_options_mod_all,
+#openToggle_brand:checked ~ .scrollbar_options_bra,
+#openToggle_model_chevrolet:checked ~ .scrollbar_models_chevrolet,
+#openToggle_model_jetour:checked ~ .scrollbar_models_jetour,
+#openToggle_model_soueast:checked ~ .scrollbar_models_soueast,
+#openToggle_model_mg:checked ~ .scrollbar_models_mg{
+    display: block;
+}
+
+#manuals_chevrolet:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#manuals_jetour:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_2,
+#manuals_soueast:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_3,
+#manuals_mg:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_4,
+
+#malibu_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_mal_all,
+#tracker_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_tra_all,
+#onix_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_oni_all,
+#damas_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_dam_all,
+#cobalt_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_cob_all,
+#captiva_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .che_cap_all,
+
+#x50_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .jet_x50_all,
+#x70_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .jet_x70_all,
+#t2_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .jet_t2_all,
+#dashing_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .jet_das_all,
+
+#s07_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .sou_s07_all,
+#s09_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .sou_s09_all,
+
+#zs_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .mg_zs_all,
+
+#malibu_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_mal,
+#tracker_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_tra,
+#onix_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_oni,
+#damas_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_dam,
+#cobalt_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_cob,
+#captiva_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .che_cap,
+
+#x50_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jet_x50,
+#x70_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jet_x70,
+#t2_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jet_t2,
+#dashing_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jet_das,
+
+#s07_model:checked ~ .manuals_form .model_forms .soueast_models .soueast_headerr .sou_s07,
+#s09_model:checked ~ .manuals_form .model_forms .soueast_models .soueast_headerr .sou_s09,
+
+#zs_model:checked ~ .manuals_form .model_forms .mg_models .mg_headerr .mg_zs{
+    display: inline;
+    color: var(--black-text);
+}
+
+#manuals_chevrolet:checked ~ .manuals_form .brand_form .select_brand .options_bra label[for="manuals_chevrolet"],
+#manuals_jetour:checked ~ .manuals_form .brand_form .select_brand .options_bra label[for="manuals_jetour"],
+#manuals_soueast:checked ~ .manuals_form .brand_form .select_brand .options_bra label[for="manuals_soueast"],
+#manuals_mg:checked ~ .manuals_form .brand_form .select_brand .options_bra label[for="manuals_mg"],
+
+#cobalt_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="cobalt_model_all"],
+#tracker_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="tracker_model_all"],
+#onix_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="onix_model_all"],
+#damas_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="damas_model_all"],
+#captiva_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="captiva_model_all"],
+#malibu_model_all:checked ~ .manuals_form .model_forms .all_models .scrollbar .options_mod_all label[for="malibu_model_all"],
+
+#x50_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="x50_model_all"],
+#x70_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="x70_model_all"],
+#t2_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="t2_model_all"],
+#dashing_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="dashing_model_all"],
+
+#s07_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="s07_model_all"],
+#s09_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="s09_model_all"],
+
+#zs_model_all:checked ~ .manuals_form .model_forms .all_models .options_mod_all label[for="zs_model_all"],
+
+#cobalt_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="cobalt_model"],
+#tracker_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="tracker_model"],
+#onix_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="onix_model"],
+#damas_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="damas_model"],
+#captiva_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="captiva_model"],
+#malibu_model:checked ~ .manuals_form .model_forms .chevrolet_models .models_chevrolet label[for="malibu_model"],
+
+#x50_model:checked ~ .manuals_form .model_forms .jetour_models .models_jetour label[for="x50_model"],
+#x70_model:checked ~ .manuals_form .model_forms .jetour_models .models_jetour label[for="x70_model"],
+#t2_model:checked ~ .manuals_form .model_forms .jetour_models .models_jetour label[for="t2_model"],
+#dashing_model:checked ~ .manuals_form .model_forms .jetour_models .models_jetour label[for="dashing_model"],
+
+#s07_model:checked ~ .manuals_form .model_forms .soueast_models .models_soueast label[for="s07_model"],
+#s09_model:checked ~ .manuals_form .model_forms .soueast_models .models_soueast label[for="s09_model"],
+
+#zs_model:checked ~ .manuals_form .model_forms .mg_models .models_mg label[for="zs_model"]{
+    background-color: var(--black-text);
+    color: var(--white-text);
+}
+
+#manuals_chevrolet:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#manuals_jetour:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#manuals_soueast:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#manuals_mg:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+
+#malibu_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#tracker_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#onix_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#damas_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#cobalt_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#captiva_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+
+#x50_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#x70_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#t2_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#dashing_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+
+#s07_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+#s09_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+
+#zs_model_all:checked ~ .manuals_form .model_forms .all_models .headerr_model_all div .placeholder_model_all,
+
+#malibu_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+#tracker_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+#onix_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+#damas_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+#cobalt_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+#captiva_model:checked ~ .manuals_form .model_forms .chevrolet_models .chevrolet_headerr .chevrolet_placeholder,
+
+#x50_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jetour_placeholder,
+#x70_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jetour_placeholder,
+#t2_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jetour_placeholder,
+#dashing_model:checked ~ .manuals_form .model_forms .jetour_models .jetour_headerr .jetour_placeholder,
+
+#s07_model:checked ~ .manuals_form .model_forms .soueast_models .soueast_headerr .soueast_placeholder,
+#s09_model:checked ~ .manuals_form .model_forms .soueast_models .soueast_headerr .soueast_placeholder,
+
+#zs_model:checked ~ .manuals_form .model_forms .mg_models .mg_headerr .mg_placeholder{
+    display: none;
+}
+
+#manuals_chevrolet:checked ~ .manuals_form .model_forms .chevrolet_models,
+#manuals_jetour:checked ~ .manuals_form .model_forms .jetour_models,
+#manuals_soueast:checked ~ .manuals_form .model_forms .soueast_models,
+#manuals_mg:checked ~ .manuals_form .model_forms .mg_models{
+    display: block;
+}
+
+#manuals_chevrolet:checked ~ .manuals_form .model_forms .select_model.all_models,
+#manuals_jetour:checked ~ .manuals_form .model_forms .select_model.all_models,
+#manuals_soueast:checked ~ .manuals_form .model_forms .select_model.all_models,
+#manuals_mg:checked ~ .manuals_form .model_forms .select_model.all_models{
+    display: none;
+}
+
+#malibu_model_all:checked ~ .image_manual .malibu_image_man,
+#tracker_model_all:checked ~ .image_manual .tracker_image_man,
+#onix_model_all:checked ~ .image_manual .onix_image_man,
+#damas_model_all:checked ~ .image_manual .damas_image_man,
+#cobalt_model_all:checked ~ .image_manual .cobalt_image_man,
+#captiva_model_all:checked ~ .image_manual .captiva_image_man,
+
+#x50_model_all:checked ~ .image_manual .x50_image_man,
+#x70_model_all:checked ~ .image_manual .x70_image_man,
+#t2_model_all:checked ~ .image_manual .t2_image_man,
+#dashing_model_all:checked ~ .image_manual .dashing_image_man,
+
+#s07_model_all:checked ~ .image_manual .s07_image_man,
+#s09_model_all:checked ~ .image_manual .s09_image_man,
+
+#zs_model_all:checked ~ .image_manual .zs_image_man,
+
+#malibu_model:checked ~ .image_manual .malibu_image_man,
+#tracker_model:checked ~ .image_manual .tracker_image_man,
+#onix_model:checked ~ .image_manual .onix_image_man,
+#damas_model:checked ~ .image_manual .damas_image_man,
+#cobalt_model:checked ~ .image_manual .cobalt_image_man,
+#captiva_model:checked ~ .image_manual .captiva_image_man,
+
+#x50_model:checked ~ .image_manual .x50_image_man,
+#x70_model:checked ~ .image_manual .x70_image_man,
+#t2_model:checked ~ .image_manual .t2_image_man,
+#dashing_model:checked ~ .image_manual .dashing_image_man,
+
+#s07_model:checked ~ .image_manual .s07_image_man,
+#s09_model:checked ~ .image_manual .s09_image_man,
+
+#zs_model:checked ~ .image_manual .zs_image_man{
+    display: block;
+}
+
+#malibu_model_all:checked ~ .image_manual .empty_image_man,
+#tracker_model_all:checked ~ .image_manual .empty_image_man,
+#onix_model_all:checked ~ .image_manual .empty_image_man,
+#damas_model_all:checked ~ .image_manual .empty_image_man,
+#cobalt_model_all:checked ~ .image_manual .empty_image_man,
+#captiva_model_all:checked ~ .image_manual .empty_image_man,
+
+#x50_model_all:checked ~ .image_manual .empty_image_man,
+#x70_model_all:checked ~ .image_manual .empty_image_man,
+#t2_model_all:checked ~ .image_manual .empty_image_man,
+#dashing_model_all:checked ~ .image_manual .empty_image_man,
+
+#s07_model_all:checked ~ .image_manual .empty_image_man,
+#s09_model_all:checked ~ .image_manual .empty_image_man,
+
+#zs_model_all:checked ~ .image_manual .empty_image_man,
+
+#malibu_model:checked ~ .image_manual .empty_image_man,
+#tracker_model:checked ~ .image_manual .empty_image_man,
+#onix_model:checked ~ .image_manual .empty_image_man,
+#damas_model:checked ~ .image_manual .empty_image_man,
+#cobalt_model:checked ~ .image_manual .empty_image_man,
+#captiva_model:checked ~ .image_manual .empty_image_man,
+
+#x50_model:checked ~ .image_manual .empty_image_man,
+#x70_model:checked ~ .image_manual .empty_image_man,
+#t2_model:checked ~ .image_manual .empty_image_man,
+#dashing_model:checked ~ .image_manual .empty_image_man,
+
+#s07_model:checked ~ .image_manual .empty_image_man,
+#s09_model:checked ~ .image_manual .empty_image_man,
+
+#zs_model:checked ~ .image_manual .empty_image_man{
+    display: none;
+}
+
+#malibu_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#tracker_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#onix_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#damas_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#cobalt_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+#captiva_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_1,
+
+#x50_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_2,
+#x70_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_2,
+#t2_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_2,
+#dashing_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_2,
+
+#s07_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_3,
+#s09_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_3,
+
+#zs_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .b_4{
+    display: inline;
+    color: var(--black-text);
+}
+
+#malibu_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#tracker_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#onix_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#damas_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#cobalt_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#captiva_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+
+#x50_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#x70_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#t2_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#dashing_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+
+#s07_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+#s09_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra,
+
+#zs_model_all:checked ~ .manuals_form .brand_form .select_brand .headerr_brand div .placeholder_bra{
+    display: none;
+}
+
+#malibu_model_all:checked ~ .manuals_form .open_bottom .malibu_manual,
+#tracker_model_all:checked ~ .manuals_form .open_bottom .tracker_manual,
+#onix_model_all:checked ~ .manuals_form .open_bottom .onix_manual,
+#damas_model_all:checked ~ .manuals_form .open_bottom .damas_manual,
+#cobalt_model_all:checked ~ .manuals_form .open_bottom .cobalt_manual,
+#captiva_model_all:checked ~ .manuals_form .open_bottom .captiva_manual,
+
+#x50_model_all:checked ~ .manuals_form .open_bottom .x50_manual,
+#x70_model_all:checked ~ .manuals_form .open_bottom .x70_manual,
+#t2_model_all:checked ~ .manuals_form .open_bottom .t2_manual,
+#dashing_model_all:checked ~ .manuals_form .open_bottom .dashing_manual,
+
+#s07_model_all:checked ~ .manuals_form .open_bottom .s07_manual,
+#s09_model_all:checked ~ .manuals_form .open_bottom .s09_manual,
+
+#zs_model_all:checked ~ .manuals_form .open_bottom .zs_manual,
+
+#malibu_model:checked ~ .manuals_form .open_bottom .malibu_manual,
+#tracker_model:checked ~ .manuals_form .open_bottom .tracker_manual,
+#onix_model:checked ~ .manuals_form .open_bottom .onix_manual,
+#damas_model:checked ~ .manuals_form .open_bottom .damas_manual,
+#cobalt_model:checked ~ .manuals_form .open_bottom .cobalt_manual,
+#captiva_model:checked ~ .manuals_form .open_bottom .captiva_manual,
+
+#x50_model:checked ~ .manuals_form .open_bottom .x50_manual,
+#x70_model:checked ~ .manuals_form .open_bottom .x70_manual,
+#t2_model:checked ~ .manuals_form .open_bottom .t2_manual,
+#dashing_model:checked ~ .manuals_form .open_bottom .dashing_manual,
+
+#s07_model:checked ~ .manuals_form .open_bottom .s07_manual,
+#s09_model:checked ~ .manuals_form .open_bottom .s09_manual,
+
+#zs_model:checked ~ .manuals_form .open_bottom .zs_manual{
+    display: flex;
+}
+
+#malibu_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#tracker_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#onix_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#damas_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#cobalt_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#captiva_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#x50_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#x70_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#t2_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#dashing_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#s07_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+#s09_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#zs_model_all:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#malibu_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#tracker_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#onix_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#damas_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#cobalt_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#captiva_model:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#x50_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#x70_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#t2_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#dashing_model:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#s07_model:checked ~ .manuals_form .open_bottom .empty_manual,
+#s09_model:checked ~ .manuals_form .open_bottom .empty_manual,
+
+#zs_model:checked ~ .manuals_form .open_bottom .empty_manual{
+    display: none;
+}

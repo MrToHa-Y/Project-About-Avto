@@ -1,0 +1,331 @@
+main{
+    font-family: interM
+}
+
+.hero_block{
+    width: 100%;
+    padding: 120px 48px 64px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    background-color: var(--gray-element);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_block h1{
+    font-size: var(--heading-font-n);
+}
+
+.hero_block p{
+    font-size: var(--normal-font-s);
+    color: var(--gray-text);
+    line-height: 150%;
+    width: 800px;
+}
+
+.shares_block{
+    width: 100%;
+    background-color: var(--gray-element);
+    overflow: hidden;
+}
+
+.shares_block input{
+    display: none;
+}
+
+.shares_block_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding-bottom: 50px;
+}
+
+.shares_block_heading label{
+    font-size: var(--heading-font-s);
+    padding: 16px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.special_offer_block,
+.service_shares,
+.news{
+    display: none;
+}
+
+#special_offer:checked ~ .special_offer_block,
+#service_shares:checked ~ .service_shares,
+#news:checked ~ .news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+#special_offer:checked ~ .shares_block_heading label[for="special_offer"],
+#service_shares:checked ~ .shares_block_heading label[for="service_shares"],
+#news:checked ~ .shares_block_heading label[for="news"]{
+    border-bottom: var(--border-button-m) var(--black-text);
+}
+
+.main_offers{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; 
+    scrollbar-width: none;
+    padding: 40px;
+    background-color: var(--white-text);
+    animation: fadeInUp 0.8s ease;
+}
+
+.offers_main{
+    width: 900px;
+    height: 630px;
+    border-radius: var(--border-radius-n);
+    scroll-snap-align: start;
+}
+
+.offers_main>:first-child{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 900px;
+    height: 465px;
+}
+
+.offers_main>:last-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100%;
+    height: 170px;
+    background-color: var(--gray-element);
+}
+
+.offers_main>:last-child>div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.offers_main>:last-child>div>h3{
+    font-size: var(--heading-font-s);
+    white-space: nowrap;       
+    overflow: hidden;          
+    text-overflow: ellipsis; 
+    width: 700px;
+    color: var(--black-text);
+}
+
+.offers_main>:last-child>div>p{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+    line-height: 150%;    
+    overflow: hidden;          
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;           
+    -webkit-box-orient: vertical;
+    width: 700px;
+}
+
+.offers_main>:last-child>div>img{
+    width: 23px;
+}
+
+.main_offers_heading{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_offers_1_heading{
+    background-image: url("../images/shares_1.png");
+}
+
+.main_offers_2_heading{
+    background-image: url("../images/shares_2.png");
+}
+
+.main_offers_3_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68caa41561264.png");
+}
+
+.main_offers_4_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ca9f0e46457.png");
+}
+
+.suggestions_offers{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+    background-color: var(--white-text);
+    padding: 40px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.offers_suggestions{
+    border-radius: var(--border-radius-n);
+    scroll-snap-align: start;
+    flex: 0 0 590px;
+}
+
+.offers_suggestions>:first-child{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    width: 100%;
+    height: 460px;
+}
+
+.offers_suggestions>:last-child{
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-element);
+    width: 100%;
+    height: 155px;
+    padding: 32px;
+}
+
+.offers_suggestions>:last-child>div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.offers_suggestions>:last-child>div>h3{
+    font-size: var(--heading-font-s);
+    color: var(--black-text);
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;       
+    overflow: hidden;          
+    text-overflow: ellipsis; 
+}
+
+.offers_suggestions>:last-child>div>p{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;           
+    -webkit-box-orient: vertical;
+}
+
+.offers_suggestions>:last-child>div>img{
+    width: 23px;
+}
+
+.suggestion_offers_heading{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.suggestions_offers_1_heading{
+    background-image: url("../images/shares_3.png");
+}
+
+.suggestions_offers_2_heading{
+    background-image: url("../images/shares_4.png");
+}
+
+.suggestions_offers_3_heading{
+    background-image: url("../images/shares_5.png");
+}
+
+.suggestions_offers_4_heading{
+    background-image: url("../images/shares_6.jpg");
+}
+
+.suggestions_offers_5_heading{
+    background-image: url("../images/shares_7.png");
+}
+
+.suggestions_offers_6_heading{
+    background-image: url("../images/shares_8.jpg");
+}
+
+.suggestions_offers_7_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ca9ef0ef183.png");
+}
+
+.suggestions_offers_8_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68dbd608989b2.png");
+}
+
+.suggestions_offers_9_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68caa19d2c22e.png");
+}
+
+.suggestions_offers_10_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/690205e3b47cb.png");
+}
+
+.suggestions_offers_11_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68f126502af59.png");
+}
+
+.suggestions_offers_12_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/690209751b7da.png");
+}
+
+.suggestions_offers_13_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68dbd5f8da4a3.png");
+}
+
+.suggestions_offers_14_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68df4ef07fb03.png");
+}
+
+.suggestions_offers_15_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68df4efe52288.png");
+}
+
+.suggestions_offers_16_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ca9f5570229.png");
+}
+
+.suggestions_offers_17_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ca9f769133d.png");
+}
+
+.suggestions_offers_18_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68cbca3c44b76.png");
+}
+
+.suggestions_offers_19_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ca9f244c588.png");
+}
+
+.suggestions_offers_20_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68caa00ba045b.png");
+}
+
+.suggestions_offers_21_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/6901fbc239da1.png");
+}
+
+.suggestions_offers_22_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68caa12d013f4.png");
+}
+
+.suggestions_offers_23_heading{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68d632c44dcf2.png");
+}

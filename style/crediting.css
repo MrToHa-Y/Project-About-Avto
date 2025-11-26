@@ -1,0 +1,549 @@
+main{
+    font-family: interM
+}
+
+.hero_block_cre{
+    width: 100%; 
+    background-color: var(--gray-element); 
+}
+
+.hero_block_cre_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 120px 48px 64px 48px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_block_cre_heading h1{
+    font-size: var(--heading-font-n);
+}
+
+.hero_block_cre_heading p{
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+    color: var(--gray-text);
+    width: 800px;
+}
+
+.hero_block_cre_main{
+    background-image: url("../images/crediting_hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 730px;
+}
+
+.credit_terms_block{
+    background-color: var(--gray-element);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 120px;
+    padding: 90px 40px 96px 40px;
+}
+
+.credit_terms_left{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 520px;
+}
+
+.credit_terms_left>h2{
+    font-size: var(--heading-font-n);
+    line-height: 150%;
+}
+
+.credit_terms_left>div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.credit_terms_left>div>svg{
+    width: 28px;
+    height: 28px;
+    color: rgba(61, 143, 96, 1);
+    padding: 6px;
+    border-radius: 60px;
+    background-color: var(--gray-element);
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.credit_terms_left>div>p{
+    color: var(--gray-text);
+    font-size: 22px;
+}
+
+.credit_terms_right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 1180px;
+}
+
+.credit_terms_right>div{
+    color: var(--black-text);
+    background-color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    border-radius: var(--border-radius-t);
+    width: 570px;
+}
+
+.credit_terms_right>div>div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.credit_terms_right>div>div>img{
+    width: 24px;
+}
+
+.credit_terms_right>div>div>h6{
+    font-size: 18px;
+}
+
+.credit_terms_right>div>p{
+    color: var(--gray-text);
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+}
+
+.crediting_calculator_block{
+    width: 100%;
+    padding: 120px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.crediting_calculator_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.crediting_calculator_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.crediting_calculator_heading h1{
+    font-size: var(--heading-font-n);
+}
+
+.crediting_calculator_main{
+    display: flex;
+    gap: 24px;
+}
+
+.crediting_calculator_main_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 860px;
+}
+
+.crediting_calculator_main_left>div{
+    background-color: var(--gray-element);
+    padding: 48px 40px;
+    border-radius: var(--border-radius-n);
+    height: 450px;
+    width: 100%;
+}
+
+.crediting_calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.crediting_calculator input[type="radio"],
+.crediting_calculator input[type="checkbox"]{
+    display: none;
+}
+
+.crediting_input{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.crediting_input>div{
+    display: flex;
+    align-items: center;
+}
+
+.crediting_input>div>input{
+    padding: 25px 24px;
+    font-size: 18px;
+    font-family: interM;
+    width: 305px;
+    height: 66px;
+    border: none;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: var(--translucent-element);
+}
+
+.crediting_input>div>input::placeholder{
+    color: var(--black-text);
+}
+
+.crediting_input>div>label{
+    padding: 21px 24px;
+    font-size: var(--normal-font-s);
+    width: 85px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    background-color: var(--translucent-element);
+}
+
+.crediting_month{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.crediting_month>div>p{
+    font-size: var(--normal-font-s);
+}
+
+.crediting_month>:last-child{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.crediting_month>div>label{
+    width: 100px;
+    font-size: var(--normal-font-s);
+    border-radius: 8px;
+    padding: 27px 42px;
+    background-color: var(--translucent-element);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crediting_calculator_foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.crediting_calculator_foot>:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crediting_calculator_foot>:first-child p{
+    font-size: var(--heading-font-s);
+    font-weight: bold;
+}
+
+.crediting_calculator_foot>:first-child>div>p{
+    display: none;
+}
+
+#m12_month_cre:checked ~ .crediting_month>div>label[for="m12_month_cre"],
+#m24_month_cre:checked ~ .crediting_month>div>label[for="m24_month_cre"],
+#m36_month_cre:checked ~ .crediting_month>div>label[for="m36_month_cre"],
+#m48_month_cre:checked ~ .crediting_month>div>label[for="m48_month_cre"],
+#m60_month_cre:checked ~ .crediting_month>div>label[for="m60_month_cre"],
+#m72_month_cre:checked ~ .crediting_month>div>label[for="m72_month_cre"],
+#m84_month_cre:checked ~ .crediting_month>div>label[for="m84_month_cre"]{
+    border: var(--border-button-m) var(--black-text);
+}
+
+#m12_month_cre:checked ~ .crediting_calculator_foot>div>div>.m12_month_cre,
+#m24_month_cre:checked ~ .crediting_calculator_foot>div>div>.m24_month_cre,
+#m36_month_cre:checked ~ .crediting_calculator_foot>div>div>.m36_month_cre,
+#m48_month_cre:checked ~ .crediting_calculator_foot>div>div>.m48_month_cre,
+#m60_month_cre:checked ~ .crediting_calculator_foot>div>div>.m60_month_cre,
+#m72_month_cre:checked ~ .crediting_calculator_foot>div>div>.m72_month_cre,
+#m84_month_cre:checked ~ .crediting_calculator_foot>div>div>.m84_month_cre{
+    display: block;
+}
+
+.crediting_calculator_foot>:last-child>p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 180%;
+}
+
+.crediting_forms_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.crediting_forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.crediting_forms>div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.crediting_forms>div>svg{
+    width: 68px;
+    height: 68px;
+    padding: 24px;
+    color: var(--black-text);
+    background-color: var(--translucent-element);
+    border-radius: var(--border-radius-t);
+}
+
+.crediting_forms>div>input{
+    display: flex;
+    align-items: center;
+    font-size: var(--normal-font-s);
+    font-family: interM;
+    border: transparent;
+    padding: var(--form-padding-n);
+    background-color: var(--translucent-element);
+    border-radius: var(--border-radius-t);
+    width: 700px;
+}
+
+.crediting_forms>div>input::placeholder{
+    color: var(--black-text);
+}
+
+.crediting_forms>div>input:focus{
+    border: transparent;
+    outline: none;
+}
+
+.select_cre{
+    position: relative;
+    height: 68px;
+}
+
+.select_cre input{
+    display: none;
+}
+
+.headerr_cre{
+    width: 700px;
+    height: 68px;
+    padding: var(--form-padding-n);
+    border-radius: var(--border-radius-t);
+    background-color: var(--translucent-element);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerr_cre>svg{
+    transition: transform 0.5s ease;
+}
+
+#openToggle_cre:checked ~ .headerr_cre>svg{
+    transform: rotate(180deg);
+}
+
+.value_cre{
+    display: none;
+}
+
+#tashkent_cre:checked ~ .headerr_cre div .c_1_cre,
+#tashkent_obl_cre:checked ~ .headerr_cre div .c_2_cre,
+#syrdarya_obl_cre:checked ~ .headerr_cre div .c_3_cre,
+#fergana_obl_cre:checked ~ .headerr_cre div .c_4_cre{
+    display: inline;
+}
+
+#tashkent_cre:checked ~ .headerr_cre div .placeholder_cre,
+#tashkent_obl_cre:checked ~ .headerr_cre div .placeholder_cre,
+#syrdarya_obl_cre:checked ~ .headerr_cre div .placeholder_cre,
+#fergana_obl_cre:checked ~ .headerr_cre div .placeholder_cre{
+    display: none;
+}
+
+.options_cre{
+    margin-top: 16px;
+    display: none;
+    width: 700px;
+    height: 200px;
+    background-color: var(--white-text);
+    border-radius: var(--border-radius-t);
+    overflow: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    position: relative;
+}
+
+.options_cre label{
+    padding: 15px 24px;
+    font-size: var(--normal-font-s);
+    display: block; 
+}
+
+#openToggle_cre:checked ~ .options_cre{
+    display: block;
+}
+
+#tashkent_cre:checked ~ .options_cre label[for="tashkent_cre"],
+#tashkent_obl_cre:checked ~ .options_cre label[for="tashkent_obl_cre"],
+#syrdarya_obl_cre:checked ~ .options_cre label[for="syrdarya_obl_cre"],
+#fergana_obl_cre:checked ~ .options_cre label[for="fergana_obl_cre"]{
+    background-color: var(--black-text);
+    color: var(--white-text);
+}
+
+.crediting_forms_foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.crediting_forms_foot a{
+    text-decoration: underline;
+    color: var(--black-text);
+    font-size: var(--small-font-s);
+}
+
+.crediting_forms_foot button{
+    background-color: var(--white-text);
+    border: var(--border-button-m) var(--black-text);
+    border-radius: var(--border-radius-button);
+    padding: var(--button-padding-n);
+    font-size: 18px;
+    font-family: interM;
+    cursor: pointer;
+}
+
+.crediting_calculator_main_right{
+    background-image: url("../images/crediting_calculator.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-n);
+    width: 940px;
+    height: 930px;
+}
+
+.crediting_steps_block{
+    width: 100%;
+    padding: 40px;
+    background-color: var(--gray-element);
+}
+
+.crediting_steps_block>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 48px;
+    border-radius: var(--border-radius-t);
+    background-color: var(--white-text);
+}
+
+.crediting_steps_heading{
+    display: flex;
+    justify-content: center;
+}
+
+.crediting_steps_heading h3{
+    font-size: var(--heading-font-s);
+}
+
+.crediting_steps_main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    gap: 64px;
+}
+
+.crediting_steps_main>div{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.crediting_steps_main>div>p{
+    font-size: var(--normal-font-s);
+    line-height: 150%;
+    color: var(--gray-text);
+    font-weight: bold;
+}
+
+.crediting_steps_main>div>svg{
+    color: var(--black-text);
+}
+
+.crediting_steps_main>svg{
+    color: var(--red-text);
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    border-radius: 60px;
+    background-color: var(--gray-element);
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.horizontal_slider_mod_block{
+    padding-bottom: 110px;
+}
+
+.horizontal_slider_mod_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.horizontal_slider_mod_heading p{
+    color: var(--red-text);
+    font-size: var(--normal-font-s);
+}
+
+.horizontal_slider_mod_heading h1{
+    width: 100%;
+}
+
+.image_4{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68cbf00615a0e.png");
+}
+
+.image_5{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/686632e011f6c.png");
+}

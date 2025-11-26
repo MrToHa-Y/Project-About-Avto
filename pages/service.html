@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../normalize.css">
+        <link rel="stylesheet" href="../style/service.css">
+        <link rel="stylesheet" href="../style/warranty.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../script.js" defer></script>
+        <link rel="icon" href="../images/logo.png">
+        <title>Сервисный центр Olamavto — профессиональное обслуживание и ремонт автомобилей | Olamavto</title>
+    </head>
+    <body>
+        <header>
+            <div class="fix">
+                <!--Навигация вкладки автомобили-->
+                <input type="checkbox" id="mega_toggle">
+                <div class="mega_menu">
+
+                    <!--Кнопки брендов-->
+                    <input type="radio" name="brand" id="brand-chevrolet" checked>
+                    <input type="radio" name="brand" id="brand-jetour">  
+                    <input type="radio" name="brand" id="brand-soueast">   
+                    <input type="radio" name="brand" id="brand-mg">
+
+                    <!--Кнопки моделей-->
+                    <input type="radio" name="model_cob" id="model-cobalt" checked>
+                    <input type="radio" name="model_cob" id="model-tracker">
+                    <input type="radio" name="model_cob" id="model-malibu">
+                    <input type="radio" name="model_cob" id="model-onix">
+                    <input type="radio" name="model_cob" id="model-damas">
+                    <input type="radio" name="model_cob" id="model-captiva">
+                    <input type="radio" name="model_mg" id="model-mg_zs" checked>
+                    <input type="radio" name="model_mg" id="model-mg_hs">
+                    <input type="radio" name="model_jet" id="model-x50">
+                    <input type="radio" name="model_jet" id="model-x70" checked>
+                    <input type="radio" name="model_jet" id="model-t2">
+                    <input type="radio" name="model_jet" id="model-dashing">
+                    <input type="radio" name="model_sou" id="model-s09" checked>
+                    <input type="radio" name="model_sou" id="model-s07">
+
+                    <!--Список брендов-->
+                    <div class="brands">
+                        <label for="brand-chevrolet">Chevrolet</label>
+                        <label for="brand-jetour">Jetour</label>
+                        <label for="brand-soueast">Soueast</label>
+                        <label for="brand-mg">MG</label>
+                    </div>
+
+                    <!--Контент окна Chevrolet-->
+                    <div class="brand_content chevrolet">
+                        <div>
+                            <div class="content_name_and_price">
+                                <h1>Chevrolet</h1>
+                                <p>От 4 199 300 TG</p>
+                            </div>
+                            <div id="mar" class="content_about">
+                                <form action="../pages/model.html">
+                                    <button id="bor">О модели</button>
+                                </form>
+                                <form action="../pages/error.html">
+                                    <button>О бренде</button>
+                                </form>
+                            </div>
+                            <div class="menu_open_model">
+                                <div id="mar">
+                                    <label for="model-cobalt">Cobalt</label>
+                                    <label for="model-tracker">Tracker</label>
+                                    <label for="model-malibu">Malibu</label>
+                                </div>
+                                <div>
+                                    <label for="model-onix">Onix</label>
+                                    <label for="model-damas">Damas</label>
+                                    <label for="model-captiva">Captiva</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="car_images car_images_chevrolet">
+                                <img class="cobalt" src="https://admin.olamavto.uz/storage/photos/original/68a2baf4ed72c.png" alt="Chevrolet Cobalt">
+                                <img class="tracker" src="https://admin.olamavto.uz/storage/photos/original/68a2ba447447e.png" alt="Chevrolet Tracker">
+                                <img class="malibu" src="https://admin.olamavto.uz/storage/photos/original/68a2b9c9ae7c2.png" alt="ChevroletMalibu">
+                                <img class="onix" src="https://admin.olamavto.uz/storage/photos/original/68a2bada4808e.png" alt="Chevrolet Onix">
+                                <img class="damas" src="https://admin.olamavto.uz/storage/photos/original/68a2bae701dc7.png" alt="Chevrolet Damas">
+                                <img class="captiva" src="https://admin.olamavto.uz/storage/photos/original/68a2bb02e6b8d.png" alt="Chevrolet Captiva">
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!--Контент окна Jetour-->                     
+                    <div class="brand_content jetour">
+                        <div>
+                            <div class="content_name_and_price">
+                                <h1>Jetour</h1>
+                                <p>От 11 163 906 TG</p>
+                            </div>
+                            <div id="mar" class="content_about">
+                                <form action="../pages/error.html">
+                                    <button id="bor">О модели</button>
+                                </form>
+                                <form action="../pages/error.html">
+                                    <button>О бренде</button>
+                                </form>
+                            </div>
+                            <div class="menu_open_model">
+                                <div id="mar">
+                                    <label for="model-x70">X70</label>
+                                    <label for="model-t2">T2</label>
+                                </div>
+                                <div>
+                                    <label for="model-dashing">Dashing</label>
+                                    <label for="model-x50">X50</label>
+                                </div>
+                            </div>  
+                        </div>
+                        <div>
+                            <div class="car_images car_images_jetour">
+                                <img class="x50" src="https://admin.olamavto.uz/storage/photos/original/68a2c307bd115.png" alt="Jetour X50">
+                                <img class="x70" src="https://admin.olamavto.uz/storage/photos/original/68a2c4e750f6b.png" alt="Jetour X70">
+                                <img class="t2" src="https://admin.olamavto.uz/storage/photos/original/68a2c50e276d4.png" alt="Jetour T2">
+                                <img class="dashing"src="https://admin.olamavto.uz/storage/photos/original/68a2c51cbedb6.png" alt="Jetour Dashing">
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!--Контент окна Soueast-->                                                       
+                    <div class="brand_content soueast">
+                        <div>
+                            <div class="content_name_and_price">
+                                <h1>Souaest</h1>
+                                <p>От 15 864 498 TG</p>
+                            </div>
+                            <div class="content_about" id="mar">
+                                <form action="../pages/error.html">
+                                    <button id="bor">О модели</button>
+                                </form>
+                                <form action="../pages/brand.html">
+                                    <button>О бренде</button>
+                                </form>
+                            </div>
+                            <div class="menu_open_model">
+                                <div id="mar">
+                                    <label for="model-s09">S09</label>
+                                    <label for="model-s07">S07</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="car_images car_images_soueast">
+                                <img class="s09" src="https://admin.olamavto.uz/storage/photos/original/68a2c72e65d31.png" alt="Soueast S09">
+                                <img class="s07" src="https://admin.olamavto.uz/storage/photos/original/68a2c6b3e6cb4.png" alt="Soueast S07">
+                            </div>
+                        </div> 
+                    </div>
+
+                    <!--Контент окна MG-->
+                    <div class="brand_content mg">
+                        <div>
+                            <div class="content_name_and_price">
+                                <h1>MG</h1>
+                                <p>От 11 294 980 TG</p>
+                            </div>
+                            <div id="mar" class="content_about">
+                                <form action="../pages/error.html">
+                                    <button id="bor">О модели</button>
+                                </form>
+                                <form action="../pages/error.html">
+                                    <button>О бренде</button>
+                                </form>
+                            </div>
+                            <div class="menu_open_model">
+                                <div id="mar">
+                                    <label for="model-mg_zs">MG ZS</label>
+                                    <label for="model-mg_hs">MG HS</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="car_images car_images_mg">
+                                <img class="zs" src="https://admin.olamavto.uz/storage/photos/original/68a2bdfb13d5b.png" alt="MG ZS">
+                                <img class="hs" src="https://admin.olamavto.uz/storage/photos/original/68a2be0836063.png" alt="MG HS">
+                            </div>
+                        </div>    
+                    </div>
+
+                </div>
+
+                <!--Навигация вкладки владельцы-->
+                <input type="checkbox" id="mega_toggle_2">
+                <div class="mega_menu_2">
+                    
+                    <!--Кнопки услуг-->
+                    <input type="radio" name="services" id="service" checked>
+                    <input type="radio" name="services" id="warranty">
+                    <input type="radio" name="services" id="shares">
+                    <input type="radio" name="services" id="manuals">
+
+                    <!--Список услуг-->
+                    <div class="services">
+                        <label for="service">Сервис</label>
+                        <label for="warranty">Гарантия</label>
+                        <label for="shares">Акции</label>
+                        <label for="manuals">Руководства</label>
+                    </div>
+
+                    <!--Контент окна Сервис-->
+                    <div class="services_content service">
+                        <figure class="figure-card">
+                            <a href="../pages/service.html">
+                                <img src="../images/service.png" alt="Сервисное обслуживание">
+                                <figcaption>Сервисное обслуживание</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <!--Контент окна Гарантия-->
+                    <div class="services_content warranty">
+                        <figure class="figure-card">
+                            <a href="../pages/warranty.html">
+                                <img src="../images/warranty.png" alt="Гарантия на автомобиль">
+                                <figcaption>Гарантия на автомобиль</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <!--Контент окна Акции-->
+                    <div class="services_content shares">
+                        <figure class="figure-card">
+                            <a href="../pages/shares.html">
+                                <img src="../images/shares.png" alt="Акции на сервис">
+                                <figcaption>Акции на сервис</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <!--Контент окна Руководства-->
+                    <div class="services_content manuals">
+                        <figure class="figure-card">
+                            <a href="../pages/manuals.html">
+                                <img src="../images/manuals.png" alt="Руководства по эксплуатации">
+                                <figcaption>Руководства по эксплуатации</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                
+                <div class="gradient">
+
+                    <input type="checkbox" id="theme_toggle">
+
+                    <nav>
+                    
+                        <!--Навигация с мегаменю header-->
+                        <div class="nav_main">
+                            <label for="mega_toggle">Автомобили</label>
+                            <a href="../pages/trade_in.html">Trade-in</a>
+                            <a href="../pages/shares.html">Спецпредложения</a>
+                            <a href="../pages/crediting.html">Кредитование</a>
+                            <label for="mega_toggle_2">Владельцам</label>
+                        </div>
+
+                        <!--Логотип header-->
+                        <div class="nav_logo">
+                            <a href="../index.html">
+                                <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M72.1046 17.2885C71.7384 16.3855 71.2121 15.5966 70.5422 14.9467C69.8734 14.2968 69.0693 13.7823 68.1486 13.415C67.2291 13.05 66.2118 12.864 65.1263 12.864C64.0207 12.864 62.9999 13.0488 62.0898 13.415C61.1786 13.7811 60.3768 14.2968 59.7092 14.9467C59.0404 15.5966 58.5153 16.3843 58.1468 17.2885C57.7818 18.1892 57.5946 19.1794 57.5946 20.2284C57.5946 21.2786 57.7818 22.2688 58.1468 23.1707C58.5153 24.0737 59.0404 24.8625 59.7092 25.5113C60.3779 26.1612 61.1786 26.6757 62.0898 27.043C62.9999 27.408 64.0207 27.5952 65.1263 27.5952C66.2118 27.5952 67.2291 27.408 68.1486 27.043C69.0681 26.6769 69.8734 26.1624 70.5422 25.5113C71.2121 24.8614 71.7372 24.0725 72.1046 23.1707C72.4719 22.2688 72.6567 21.2786 72.6567 20.2284C72.6567 19.1794 72.4707 18.1892 72.1046 17.2885ZM65.1263 24.1243C63.9783 24.1243 63.047 23.7605 62.3571 23.0447C61.6648 22.3265 61.3139 21.3787 61.3139 20.2284C61.3139 19.0793 61.6648 18.1315 62.3571 17.4133C63.047 16.6986 63.9795 16.3337 65.1263 16.3337C66.2719 16.3337 67.1984 16.6975 67.8813 17.4133C68.5642 18.1315 68.9103 19.0793 68.9103 20.2284C68.9103 21.3799 68.5642 22.3277 67.8813 23.0447C67.1984 23.7605 66.273 24.1243 65.1263 24.1243Z" fill="white"/>
+                                    <path d="M78.5483 8.80084H74.8572V27.2373H78.5483V8.80084Z" fill="white"/>
+                                    <path d="M163.218 13.2207V16.9118H160.394V27.2373H156.703V16.9118H153.981V13.2207H156.703V8.79968H160.394V13.2207H163.218Z" fill="white"/>
+                                    <path d="M95.2022 17.2744C94.836 16.3631 94.3204 15.5695 93.6704 14.9196C93.0205 14.2697 92.2223 13.7588 91.2992 13.4008C90.3797 13.0441 89.3636 12.864 88.2793 12.864C87.1737 12.864 86.1529 13.0488 85.2428 13.415C84.3315 13.7811 83.5297 14.2968 82.8622 14.9467C82.1934 15.5966 81.6683 16.3843 81.2998 17.2885C80.9348 18.1892 80.7476 19.1794 80.7476 20.2284C80.7476 21.4646 80.9537 22.5537 81.3575 23.4662C81.7613 24.3775 82.2959 25.1498 82.9469 25.7632C83.598 26.3778 84.3492 26.8405 85.1804 27.1419C86.0081 27.4422 86.8464 27.5952 87.6729 27.5952C88.8632 27.5952 89.9087 27.3197 90.7835 26.7793C91.437 26.3743 91.9562 25.8609 92.3388 25.2464V27.2373H95.7544V20.3391C95.7544 19.217 95.5695 18.1868 95.2022 17.2744ZM88.2793 16.3337C89.4248 16.3337 90.3514 16.6975 91.032 17.4133C91.7172 18.1315 92.0622 19.0793 92.0622 20.2284C92.0622 21.3799 91.716 22.3277 91.032 23.0447C90.3514 23.7593 89.4248 24.1243 88.2793 24.1243C87.1313 24.1243 86.2 23.7605 85.5101 23.0447C84.8178 22.3265 84.4669 21.3787 84.4669 20.2284C84.4669 19.0793 84.8178 18.1315 85.5101 17.4133C86.2 16.6975 87.1325 16.3337 88.2793 16.3337Z" fill="white"/>
+                                    <path d="M119.267 19.2653V27.2373H115.575V19.2653C115.575 18.2116 115.338 17.4498 114.869 17.0071C114.39 16.555 113.789 16.3337 113.03 16.3337C112.288 16.3337 111.696 16.5574 111.219 17.0201C110.751 17.4722 110.513 18.2281 110.513 19.2653V27.2373H106.822V19.2653C106.822 18.2292 106.579 17.4734 106.101 17.0213C105.614 16.5597 105.017 16.3337 104.276 16.3337C103.517 16.3337 102.915 16.555 102.436 17.0071C101.967 17.4498 101.731 18.2092 101.731 19.2653V27.2373H98.0385V19.2653C98.0385 18.181 98.1916 17.2249 98.4918 16.4255C98.7944 15.6214 99.2135 14.9491 99.7386 14.4252C100.263 13.9012 100.895 13.5056 101.619 13.2478C102.336 12.9935 103.118 12.8651 103.945 12.8651C105.003 12.8651 105.955 13.0806 106.78 13.5068C107.529 13.8942 108.158 14.4405 108.651 15.1339C109.128 14.4405 109.75 13.8942 110.5 13.5068C111.324 13.0806 112.287 12.8651 113.362 12.8651C114.19 12.8651 114.971 12.9935 115.688 13.2478C116.41 13.5056 117.042 13.9012 117.569 14.4252C118.091 14.9491 118.511 15.6214 118.814 16.4255C119.115 17.2261 119.267 18.1821 119.267 19.2653Z" fill="white"/>
+                                    <path d="M135.869 17.2744C135.502 16.3631 134.986 15.5695 134.336 14.9196C133.686 14.2697 132.889 13.7588 131.966 13.4008C131.046 13.0441 130.029 12.864 128.946 12.864C127.84 12.864 126.818 13.0488 125.908 13.415C124.997 13.7811 124.196 14.2968 123.529 14.9467C122.859 15.5966 122.335 16.3843 121.966 17.2885C121.6 18.1892 121.414 19.1794 121.414 20.2284C121.414 21.4646 121.619 22.5537 122.024 23.4662C122.428 24.3775 122.962 25.1498 123.613 25.7632C124.263 26.3778 125.014 26.8405 125.844 27.1419C126.672 27.4422 127.512 27.5952 128.339 27.5952C129.53 27.5952 130.575 27.3197 131.45 26.7793C132.103 26.3743 132.623 25.8609 133.005 25.2464V27.2373H136.421V20.3391C136.421 19.217 136.235 18.1868 135.869 17.2744ZM128.946 24.1243C127.798 24.1243 126.866 23.7605 126.176 23.0447C125.484 22.3265 125.133 21.3787 125.133 20.2284C125.133 19.0793 125.484 18.1315 126.176 17.4133C126.866 16.6986 127.798 16.3337 128.946 16.3337C130.091 16.3337 131.018 16.6975 131.698 17.4133C132.381 18.1315 132.729 19.0793 132.729 20.2284C132.729 21.3799 132.381 22.3277 131.698 23.0447C131.018 23.7605 130.091 24.1243 128.946 24.1243Z" fill="white"/>
+                                    <path d="M151.961 13.2207L146.458 27.2373H142.238L136.733 13.2207H140.763L144.388 23.405L148.014 13.2207H151.961Z" fill="white"/>
+                                    <path d="M179.334 17.2885C178.969 16.3878 178.443 15.599 177.774 14.9444C177.105 14.2956 176.298 13.7811 175.379 13.4161C174.46 13.05 173.443 12.864 172.356 12.864C171.25 12.864 170.229 13.0488 169.32 13.4161C168.41 13.7811 167.608 14.2956 166.939 14.9444C166.269 15.5955 165.744 16.3843 165.377 17.2885C165.011 18.1916 164.825 19.1805 164.825 20.2284C164.825 21.2751 165.01 22.2664 165.377 23.1707C165.743 24.0725 166.269 24.8614 166.939 25.5124C167.609 26.1612 168.41 26.6757 169.32 27.0407C170.231 27.4092 171.253 27.594 172.356 27.594C173.441 27.594 174.458 27.4092 175.378 27.0407C176.299 26.6757 177.106 26.1612 177.774 25.5101C178.445 24.8567 178.969 24.069 179.334 23.1683C179.7 22.2676 179.886 21.2786 179.886 20.2272C179.885 19.1782 179.7 18.1892 179.334 17.2885ZM172.355 16.3337C173.501 16.3337 174.427 16.6963 175.108 17.411C175.791 18.1303 176.138 19.0781 176.138 20.2272C176.138 21.3787 175.792 22.3265 175.108 23.0435C174.427 23.7605 173.501 24.1232 172.355 24.1232C171.209 24.1232 170.277 23.7605 169.586 23.0435C168.894 22.3241 168.543 21.3763 168.543 20.2272C168.543 19.0793 168.894 18.1315 169.586 17.4121C170.277 16.6975 171.207 16.3337 172.355 16.3337Z" fill="white"/>
+                                    <path d="M46.97 20.02L41.1256 30.1431L40.9089 29.7675L37.9384 24.6224V24.6212L35.2811 20.02H38.6531V20C38.6531 11.6053 31.8479 4.79896 23.4521 4.79896C21.3681 4.79896 19.3831 5.21811 17.5746 5.97751C15.0268 7.04657 12.831 8.79025 11.2133 10.9849L8.65134 6.54736C9.55203 5.55837 10.5493 4.66003 11.6289 3.86766C14.9408 1.43639 19.0287 0 23.4521 0C34.4982 0 43.4532 8.95391 43.4532 20V20.02H46.97Z" fill="white"/>
+                                    <path d="M38.2881 33.4126C36.8929 34.955 35.2599 36.2795 33.4479 37.3274C30.5069 39.0275 27.0937 40 23.4521 40C12.4118 40 3.45912 31.0532 3.45205 20.013H0L5.84447 9.88992L6.01872 10.1913L8.98334 15.327L11.6889 20.013H8.25219C8.25926 28.4017 15.0621 35.201 23.4521 35.201C26.3531 35.201 29.0634 34.3887 31.3687 32.9793C33.0688 31.9397 34.5499 30.5752 35.7238 28.9728L38.2881 33.4126Z" fill="white"/>
+                                    <path d="M23.4521 10.8212C18.3835 10.8212 14.2744 14.9314 14.2744 20C14.2744 25.0686 18.3835 29.1788 23.4521 29.1788C28.5218 29.1788 32.6308 25.0686 32.6308 20C32.6308 14.9314 28.5218 10.8212 23.4521 10.8212ZM23.4521 24.4293C21.0067 24.4293 19.024 22.4466 19.024 20C19.024 17.5534 21.0067 15.5707 23.4521 15.5707C25.8986 15.5707 27.8813 17.5534 27.8813 20C27.8813 22.4466 25.8986 24.4293 23.4521 24.4293Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!--Контакты header-->
+                        <div class="nav_contacts">
+                            <a id="arr" href="../pages/error.html">Записаться на тест драйв</a>
+
+                            <a href="../test_code_version/test_1.html">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.6667 1.33334L7.33337 8.66668M14.6667 1.33334L10 14.6667L7.33337 8.66668M14.6667 1.33334L1.33337 6.00001L7.33337 8.66668" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="../test_code_version/test_2.html">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4196_826)">
+                                        <path d="M15.3334 4.66666V0.666656M15.3334 0.666656H11.3334M15.3334 0.666656L10.6667 5.33332M14.6667 11.28V13.28C14.6675 13.4657 14.6294 13.6494 14.555 13.8196C14.4807 13.9897 14.3716 14.1424 14.2348 14.2679C14.0979 14.3934 13.9364 14.489 13.7605 14.5485C13.5847 14.6079 13.3983 14.63 13.2134 14.6133C11.1619 14.3904 9.19137 13.6894 7.46004 12.5667C5.84926 11.5431 4.48359 10.1774 3.46004 8.56666C2.33336 6.82746 1.6322 4.84732 1.41337 2.78666C1.39671 2.6023 1.41862 2.4165 1.4777 2.24107C1.53679 2.06565 1.63175 1.90445 1.75655 1.76774C1.88134 1.63103 2.03324 1.5218 2.20256 1.447C2.37189 1.37221 2.55493 1.3335 2.74004 1.33332H4.74004C5.06357 1.33014 5.37723 1.44471 5.62254 1.65568C5.86786 1.86665 6.02809 2.15962 6.07337 2.47999C6.15779 3.12003 6.31434 3.74847 6.54004 4.35332C6.62973 4.59194 6.64915 4.85127 6.59597 5.10058C6.5428 5.34989 6.41928 5.57873 6.24004 5.75999L5.39337 6.60666C6.34241 8.27569 7.72434 9.65762 9.39337 10.6067L10.24 9.75999C10.4213 9.58075 10.6501 9.45722 10.8994 9.40405C11.1488 9.35088 11.4081 9.37029 11.6467 9.45999C12.2516 9.68569 12.88 9.84224 13.52 9.92666C13.8439 9.97234 14.1396 10.1355 14.3511 10.385C14.5625 10.6345 14.6748 10.953 14.6667 11.28Z" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4196_826">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+
+                            <a href="../test_code_version/test_3.html">RU</a>
+
+                            <label for="theme_toggle" class="theme_toggle_horizontal">
+                                <div class="theme_switch_button">
+                                    <span class="theme_icon">
+                                        <svg class="sun_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_3_464)">
+                                                <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_3_464">
+                                                    <rect width="24" height="24" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg class="moon_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1181 10.0795 20.7461C8.41101 20.3741 6.88299 19.5345 5.67422 18.3258C4.46545 17.117 3.62593 15.589 3.2539 13.9205C2.88187 12.252 2.99271 10.5121 3.57345 8.9043C4.1542 7.29651 5.18082 5.88737 6.53321 4.84175C7.88559 3.79614 9.50779 3.15731 11.21 3C10.2134 4.34827 9.73384 6.00945 9.85852 7.68141C9.98321 9.35338 10.7039 10.9251 11.8894 12.1106C13.0749 13.2961 14.6466 14.0168 16.3186 14.1415C17.9905 14.2662 19.6517 13.7866 21 12.79Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </label>
+                            
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <!--Hero блок-->
+            <div class="hero_block">
+
+                <!--Верхняя часть блока-->
+                <div class="hero_block_heading">
+                    <h1>Сервисный центр Olamavto</h1>
+                    <p>Наша цель — обеспечить ваш автомобиль качественным обслуживанием, которое гарантирует его надёжность и долговечность.</p>
+                </div>
+
+                <!--Основная часть блока-->
+                <div class="hero_block_main_service">
+                    
+                </div>
+
+            </div>
+
+            <!--Блок слесарного цеха-->
+            <div class="mechanical_workshop_block">
+
+                <!--Верхняя часть блока-->
+                <div class="mechanical_workshop_heading">
+                    <p>СЛЕСАРНЫЙ ЦЕХ</p>
+                </div>
+
+                <!--Основная часть блока-->
+                <div class="mechanical_workshop_main">
+
+                    <!--Левая часть основного блока-->
+                    <div class="mechanical_workshop_main_left">
+
+                        <!--Контейнер слайдера-->
+                        <div class="mechanical_workshop_slider">
+
+                            <!--Скрытые кнопки переключения слайдов-->
+                            <input type="radio" name="mechanical_workshop" id="mechanical_workshop_1" checked>
+                            <input type="radio" name="mechanical_workshop" id="mechanical_workshop_2">
+                        
+
+                            <!--Контейнер содержимое слайдов-->
+                            <div class="slide_wrapper_ser">
+                                <div class="slide_ser slide_1_ser">
+
+                                </div>
+
+                                <div class="slide_ser slide_2_ser">
+
+                                </div>
+                            </div>
+
+                            <!--Контейнер навигации слайдера-->
+                            <div class="navigation_ser">
+
+                                <!--Отоброжаемые кнопки вправа-->
+                                <label for="mechanical_workshop_2" class="nav_button_ser nav_right_ser to_slide_1_right_ser" title="К слайду 1"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M24.6654 19.9999H15.332M15.332 19.9999L19.9987 24.6666M15.332 19.9999L19.9987 15.3333" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                                <label for="mechanical_workshop_1" class="nav_button_ser nav_right_ser to_slide_2_right_ser" title="К слайду 2"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M24.6654 19.9999H15.332M15.332 19.9999L19.9987 24.6666M15.332 19.9999L19.9987 15.3333" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                            
+                                <!--Счетчик слайдеров-->
+                                <div class="slide_counter_ser"> </div>
+
+                                <!--Отоброжаемые кнопки влево-->
+                                <label for="mechanical_workshop_2" class="nav_button_ser nav_right_ser to_slide_1_right_ser" title="К слайду 1"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M15.3346 20.0001L24.668 20.0001M24.668 20.0001L20.0013 15.3334M24.668 20.0001L20.0013 24.6667" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                                <label for="mechanical_workshop_1" class="nav_button_ser nav_left_ser to_slide_2_left_ser" title="К слайду 2"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M15.3346 20.0001L24.668 20.0001M24.668 20.0001L20.0013 15.3334M24.668 20.0001L20.0013 24.6667" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--Правая часть оснвоного блока-->
+                    <div class="mechanical_workshop_main_right">
+                        <div>
+                            <h2>13 постов</h2>
+                            <p>где опытные механики предоставляют широкий спектр услуг, включая техническое обслуживание, диагностику и ремонт основных узлов и систем автомобиля.</p>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Регулярное техническое обслуживание и замена расходных материалов</h3>
+                                <p>Периодическое техобслуживание необходимо для поддержания оптимальной работы вашего автомобиля и предотвращения непредвиденных поломок.</p>
+                            </div>
+                            <div>
+                                <h3>Диагностика и ремонт двигателя, трансмиссии и подвески</h3>
+                                <p>Наши опытные механики осуществляют всестороннюю диагностику и профессиональный ремонт основных узлов и систем вашего автомобиля для обеспечения его бесперебойной работы.</p>
+                            </div>
+                            <div>
+                                <h3>Замена и ремонт тормозных систем</h3>
+                                <p>Безопасность на дороге — наш приоритет.
+                                    Мы осуществляем замену тормозных колодок, дисков, а также проводим ремонт гидроусилителя тормозов для обеспечения эффективного торможения вашего автомобиля.</p>
+                            </div>
+                            <div>
+                                <h3>Обслуживание и ремонт системы кондиционирования</h3>
+                                <p>Наши специалисты проводят тщательную диагностику и ремонт системы кондиционирования, обеспечивая комфортное вождение в любое время года.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Блок профессионализма команды-->
+            <div class="professionalism_block">
+                <h1>Профессиональный уход за вашим автомобилем!</h1>
+                <p>Мы являемся официальным дилером Chevrolet, что подтверждает нашу компетентность и качество обслуживания. 
+                    В нашем сервисном центре работают высококвалифицированные сотрудники, готовые обеспечить вашему автомобилю качественное обслуживание на самом высоком уровне!</p>
+            </div>
+
+            <!--Блок детейлинга-->
+            <div class="detailing_block">
+
+                <!--Верхняя часть блока-->
+                <div class="detailing_heading">
+                    <p>КУЗОВНОЙ ЦЕХ И ДЕТЕЙЛИНГ</p>
+                </div>
+
+                <!--Основная часть блока-->
+                <div class="detailing_main">
+
+                    <!--Левая часть основного блока-->
+                    <div class="detailing_main_left">
+
+                        <!--Сдайжер блока-->
+                        <div class="detailing_slider">
+
+                            <!--Скрытые кнопки переключения слайдов-->
+                            <input type="radio" name="detailing" id="detailing_1" checked>
+                            <input type="radio" name="detailing" id="detailing_2">
+                        
+
+                            <!--Контейнер с содержимым слайдов-->
+                            <div class="slide_wrapper_det">
+                                <div class="slide_det slide_1_det">
+
+                                </div>
+
+                                <div class="slide_det slide_2_det">
+
+                                </div>
+                            </div>
+
+                            <!--КОнтейнер с навигацией слайдов-->
+                            <div class="navigation_det">
+
+                                <!--Отоброжаемые кнопки вправа-->
+                                <label for="detailing_2" class="nav_button_det nav_right_det to_slide_1_right_det" title="К слайду 2"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M24.6654 19.9999H15.332M15.332 19.9999L19.9987 24.6666M15.332 19.9999L19.9987 15.3333" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                                <label for="detailing_1" class="nav_button_det nav_right_det to_slide_2_right_det" title="К слайду 1"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M24.6654 19.9999H15.332M15.332 19.9999L19.9987 24.6666M15.332 19.9999L19.9987 15.3333" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                            
+                                <!--Счетчик слайдов-->
+                                <div class="slide_counter_det"> </div>
+
+                                <!--Отоброжаемы кнопки влево-->
+                                <label for="detailing_2" class="nav_button_det nav_left_det to_slide_1_left_det" title="К слайду 2"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M15.3346 20.0001L24.668 20.0001M24.668 20.0001L20.0013 15.3334M24.668 20.0001L20.0013 24.6667" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+                                <label for="detailing_1" class="nav_button_det nav_left_det to_slide_2_left_det" title="К слайду 2"> 
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="40" height="40" rx="20" fill="#E9ECEF"/>
+                                        <path d="M15.3346 20.0001L24.668 20.0001M24.668 20.0001L20.0013 15.3334M24.668 20.0001L20.0013 24.6667" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </label>
+
+                            </div>
+
+                        </div> 
+
+                    </div>
+
+                    <!--Правая часть основного блока-->
+                    <div class="detailing_main_right">
+                        <div>
+                            <div>
+                                <h3>1 пост</h3>
+                                <p>для исправления геометрии кузова,чтобы ваш автомобиль всегда выглядел идеально</p>
+                            </div>
+                            <div>
+                                <h3> 2 поста</h3>
+                                <p>автомойки, чтобы ваш автомобиль был не только функциональным, но и блестящим</p>
+                            </div>
+                            <div>
+                                <h3>3 поста</h3>
+                                <p>универсальных поста, обеспечивающих широкий спектр услуг по ремонту кузова и детейлингу</p>
+                            </div>
+                            <div>
+                                <h3>5 постов</h3>
+                                <p>для арматурных работ, включая сварку и сборку/разборку автомобилей, для восстановления оригинального состояния</p>
+                            </div>
+                            <div>
+                                <h3>2 поста</h3>
+                                <p>для вакуумных работ, где мы удаляем вмятины и другие дефекты кузова</p>
+                            </div>
+                            <div>
+                                <h3>1 пост</h3>
+                                <p>Окрасочно-сушильная камера для качественной покраски автомобиля</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Что входит в кузовное обслуживание</h3>
+                            <ul>
+                                <li>Ремонт кузовных повреждений различной сложности;</li>
+                                <li>Покраска автомобиля;</li>
+                                <li>Детейлинг;</li>
+                                <li>Тонировка автомобиля.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Блок с формами-->
+            <div class="warranty_forms_block">
+
+                <!--Контенйнер для заднего фона-->
+                <div class="warranty_background">
+
+                    <!--Верхняя часть контейнера-->
+                    <div class="warranty_forms_heading">
+                        <h2>Запишитесь на сервис</h2>
+                        <p>Заполните форму, и наш специалист свяжется с вами в кратчайшие сроки.</p>
+                    </div>
+
+                    <!--Основная часть контейнера-->
+                    <div class="warranty_forms_main">
+
+                        <!--Контейнер с формами-->
+                        <div class="warranty_forms">
+
+                            <!--Форма с именем-->
+                            <div class="name_war">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 15.75V14.25C15 13.4544 14.6839 12.6913 14.1213 12.1287C13.5587 11.5661 12.7956 11.25 12 11.25H6C5.20435 11.25 4.44129 11.5661 3.87868 12.1287C3.31607 12.6913 3 13.4544 3 14.25V15.75M12 5.25C12 6.90685 10.6569 8.25 9 8.25C7.34315 8.25 6 6.90685 6 5.25C6 3.59315 7.34315 2.25 9 2.25C10.6569 2.25 12 3.59315 12 5.25Z" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+
+                            <!--Форма с номером телефона-->
+                            <div class="phone_war">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_447_1315)">
+                                        <path d="M11.9981 1.5V6M11.9981 6H16.4981M11.9981 6L17.2481 0.75M16.4981 12.69V14.94C16.499 15.1489 16.4562 15.3556 16.3725 15.547C16.2888 15.7384 16.1661 15.9102 16.0122 16.0514C15.8583 16.1926 15.6765 16.3001 15.4787 16.367C15.2808 16.4339 15.0711 16.4588 14.8631 16.44C12.5552 16.1892 10.3384 15.4006 8.39062 14.1375C6.57849 12.986 5.04212 11.4496 3.89062 9.6375C2.6231 7.6809 1.8343 5.45325 1.58812 3.135C1.56938 2.9276 1.59402 2.71857 1.66049 2.52122C1.72696 2.32387 1.8338 2.14252 1.97419 1.98872C2.11459 1.83491 2.28547 1.71203 2.47596 1.62789C2.66645 1.54375 2.87237 1.5002 3.08062 1.5H5.33062C5.6946 1.49642 6.04746 1.62531 6.32344 1.86265C6.59942 2.09999 6.77968 2.42959 6.83062 2.79C6.92559 3.51005 7.10171 4.21705 7.35562 4.8975C7.45653 5.16594 7.47837 5.45769 7.41855 5.73816C7.35873 6.01863 7.21977 6.27608 7.01812 6.48L6.06562 7.4325C7.13329 9.31016 8.68796 10.8648 10.5656 11.9325L11.5181 10.98C11.722 10.7784 11.9795 10.6394 12.26 10.5796C12.5404 10.5198 12.8322 10.5416 13.1006 10.6425C13.7811 10.8964 14.4881 11.0725 15.2081 11.1675C15.5724 11.2189 15.9052 11.4024 16.143 11.6831C16.3809 11.9638 16.5072 12.3222 16.4981 12.69Z" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_447_1315">
+                                            <rect width="18" height="18" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <input type="number" placeholder="+9__-__-___-__-__">
+                            </div>
+
+                            <!--Контейнер формы с выбором города-->
+                            <div class="location_war">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.75 7.5C15.75 12.75 9 17.25 9 17.25C9 17.25 2.25 12.75 2.25 7.5C2.25 5.70979 2.96116 3.9929 4.22703 2.72703C5.4929 1.46116 7.20979 0.75 9 0.75C10.7902 0.75 12.5071 1.46116 13.773 2.72703C15.0388 3.9929 15.75 5.70979 15.75 7.5Z" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 9.75C10.2426 9.75 11.25 8.74264 11.25 7.5C11.25 6.25736 10.2426 5.25 9 5.25C7.75736 5.25 6.75 6.25736 6.75 7.5C6.75 8.74264 7.75736 9.75 9 9.75Z" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <!--Контейнер с выбором города-->
+                                <div class="select_war">
+
+                                    <!--Скрытые кнопки выбора города-->
+                                    <input type="radio" name="city" id="tashkent_war">
+                                    <input type="radio" name="city" id="tashkent_obl_war">
+                                    <input type="radio" name="city" id="syrdarya_obl_war">
+                                    <input type="radio" name="city" id="fergana_obl_war">
+
+                                    <!--Скрытая кнопка открытия меню-->
+                                    <input type="checkbox" id="openToggle_war">
+
+                                    <!--Контейнер отображения выбора города-->
+                                    <label class="headerr_war" for="openToggle_war">
+                                        <div>
+                                            <span class="placeholder_war">Выберите город</span>
+                                            <span class="value_war c_1_war">Ташкент</span>
+                                            <span class="value_war c_2_war">Ташкентская область</span>
+                                            <span class="value_war c_3_war">Сырдарьинская область</span>
+                                            <span class="value_war c_4_war">Ферганская область</span>
+                                        </div>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </label>
+                                
+                                    <!--Контейнер меню выбора города-->
+                                    <div class="options_war">
+                                      <label class="opt_label_war" for="tashkent_war">Ташкент</label>
+                                      <label class="opt_label_war" for="tashkent_obl_war">Ташкентская область</label>
+                                      <label class="opt_label_war" for="syrdarya_obl_war">Сырдарьинская область</label>
+                                      <label class="opt_label_war" for="fergana_obl_war">Ферганская область</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Нижняя часть контейнера-->
+                        <div class="warranty_forms_foot">
+                            <a href="../pages/error.html">Отправляя форму, я соглашаюсь с политикой конфиденциальности</a>
+                            <form action="../pages/error.html" target="_blank">
+                                <button>Отправить</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--Блок footer-->
+        <footer>
+            <div class="footer_background">
+                <div class="top_side">
+
+                    <!--Левая часть footer-->
+                    <div class="left_side">
+                        <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M72.1046 17.2886C71.7384 16.3855 71.2121 15.5967 70.5422 14.9468C69.8734 14.2969 69.0693 13.7824 68.1486 13.415C67.2291 13.05 66.2118 12.864 65.1263 12.864C64.0207 12.864 62.9999 13.0489 62.0898 13.415C61.1786 13.7812 60.3768 14.2969 59.7092 14.9468C59.0404 15.5967 58.5153 16.3844 58.1468 17.2886C57.7818 18.1893 57.5946 19.1794 57.5946 20.2285C57.5946 21.2787 57.7818 22.2689 58.1468 23.1707C58.5153 24.0738 59.0404 24.8626 59.7092 25.5113C60.3779 26.1612 61.1786 26.6757 62.0898 27.0431C62.9999 27.4081 64.0207 27.5953 65.1263 27.5953C66.2118 27.5953 67.2291 27.4081 68.1486 27.0431C69.0681 26.6769 69.8734 26.1624 70.5422 25.5113C71.2121 24.8614 71.7372 24.0726 72.1046 23.1707C72.4719 22.2689 72.6567 21.2787 72.6567 20.2285C72.6567 19.1794 72.4707 18.1893 72.1046 17.2886ZM65.1263 24.1244C63.9783 24.1244 63.047 23.7606 62.3571 23.0447C61.6648 22.3265 61.3139 21.3788 61.3139 20.2285C61.3139 19.0794 61.6648 18.1316 62.3571 17.4134C63.047 16.6987 63.9795 16.3337 65.1263 16.3337C66.2719 16.3337 67.1984 16.6975 67.8813 17.4134C68.5642 18.1316 68.9103 19.0794 68.9103 20.2285C68.9103 21.3799 68.5642 22.3277 67.8813 23.0447C67.1984 23.7606 66.273 24.1244 65.1263 24.1244Z" fill="#262627"/>
+                            <path d="M78.5483 8.80078H74.8572V27.2372H78.5483V8.80078Z" fill="#262627"/>
+                            <path d="M163.218 13.2206V16.9116H160.394V27.2372H156.703V16.9116H153.981V13.2206H156.703V8.79956H160.394V13.2206H163.218Z" fill="#262627"/>
+                            <path d="M95.2022 17.2744C94.836 16.3632 94.3204 15.5696 93.6704 14.9197C93.0205 14.2698 92.2223 13.7588 91.2992 13.4009C90.3797 13.0442 89.3636 12.864 88.2793 12.864C87.1737 12.864 86.1529 13.0489 85.2428 13.415C84.3315 13.7812 83.5297 14.2969 82.8622 14.9468C82.1934 15.5967 81.6683 16.3844 81.2998 17.2886C80.9348 18.1893 80.7476 19.1794 80.7476 20.2285C80.7476 21.4647 80.9537 22.5538 81.3575 23.4662C81.7613 24.3775 82.2959 25.1499 82.9469 25.7633C83.598 26.3779 84.3492 26.8406 85.1804 27.142C86.0081 27.4422 86.8464 27.5953 87.6729 27.5953C88.8632 27.5953 89.9087 27.3198 90.7835 26.7794C91.437 26.3743 91.9562 25.861 92.3388 25.2464V27.2374H95.7544V20.3391C95.7544 19.2171 95.5695 18.1869 95.2022 17.2744ZM88.2793 16.3337C89.4248 16.3337 90.3514 16.6975 91.032 17.4134C91.7172 18.1316 92.0622 19.0794 92.0622 20.2285C92.0622 21.3799 91.716 22.3277 91.032 23.0447C90.3514 23.7594 89.4248 24.1244 88.2793 24.1244C87.1313 24.1244 86.2 23.7606 85.5101 23.0447C84.8178 22.3265 84.4669 21.3788 84.4669 20.2285C84.4669 19.0794 84.8178 18.1316 85.5101 17.4134C86.2 16.6975 87.1325 16.3337 88.2793 16.3337Z" fill="#262627"/>
+                            <path d="M119.266 19.2654V27.2374H115.575V19.2654C115.575 18.2117 115.338 17.4499 114.869 17.0072C114.39 16.5551 113.789 16.3338 113.03 16.3338C112.288 16.3338 111.696 16.5575 111.219 17.0202C110.751 17.4723 110.513 18.2282 110.513 19.2654V27.2374H106.822V19.2654C106.822 18.2293 106.579 17.4735 106.101 17.0214C105.614 16.5598 105.017 16.3338 104.276 16.3338C103.517 16.3338 102.915 16.5551 102.436 17.0072C101.967 17.4499 101.731 18.2093 101.731 19.2654V27.2374H98.0385V19.2654C98.0385 18.1811 98.1915 17.225 98.4918 16.4256C98.7944 15.6215 99.2135 14.9492 99.7386 14.4253C100.263 13.9013 100.895 13.5057 101.619 13.2479C102.336 12.9936 103.118 12.8652 103.945 12.8652C105.003 12.8652 105.955 13.0807 106.78 13.5069C107.529 13.8943 108.158 14.4406 108.651 15.134C109.128 14.4406 109.75 13.8943 110.5 13.5069C111.324 13.0807 112.287 12.8652 113.362 12.8652C114.19 12.8652 114.971 12.9936 115.688 13.2479C116.41 13.5057 117.042 13.9013 117.569 14.4253C118.091 14.9492 118.511 15.6215 118.814 16.4256C119.115 17.2262 119.266 18.1822 119.266 19.2654Z" fill="#262627"/>
+                            <path d="M135.869 17.2744C135.502 16.3632 134.986 15.5696 134.336 14.9197C133.686 14.2698 132.889 13.7588 131.966 13.4009C131.046 13.0442 130.029 12.864 128.946 12.864C127.84 12.864 126.818 13.0489 125.908 13.415C124.997 13.7812 124.196 14.2969 123.529 14.9468C122.859 15.5967 122.335 16.3844 121.966 17.2886C121.6 18.1893 121.414 19.1794 121.414 20.2285C121.414 21.4647 121.619 22.5538 122.024 23.4662C122.428 24.3775 122.962 25.1499 123.613 25.7633C124.263 26.3779 125.014 26.8406 125.844 27.142C126.672 27.4422 127.512 27.5953 128.339 27.5953C129.53 27.5953 130.575 27.3198 131.45 26.7794C132.103 26.3743 132.623 25.861 133.005 25.2464V27.2374H136.421V20.3391C136.421 19.2171 136.235 18.1869 135.869 17.2744ZM128.946 24.1244C127.798 24.1244 126.866 23.7606 126.176 23.0447C125.484 22.3265 125.133 21.3788 125.133 20.2285C125.133 19.0794 125.484 18.1316 126.176 17.4134C126.866 16.6987 127.798 16.3337 128.946 16.3337C130.091 16.3337 131.018 16.6975 131.698 17.4134C132.381 18.1316 132.729 19.0794 132.729 20.2285C132.729 21.3799 132.381 22.3277 131.698 23.0447C131.018 23.7606 130.091 24.1244 128.946 24.1244Z" fill="#262627"/>
+                            <path d="M151.961 13.2207L146.458 27.2373H142.238L136.733 13.2207H140.763L144.388 23.405L148.014 13.2207H151.961Z" fill="#262627"/>
+                            <path d="M179.334 17.2886C178.969 16.3879 178.444 15.599 177.774 14.9444C177.105 14.2957 176.298 13.7812 175.379 13.4162C174.46 13.05 173.443 12.864 172.356 12.864C171.25 12.864 170.229 13.0489 169.32 13.4162C168.41 13.7812 167.608 14.2957 166.939 14.9444C166.27 15.5955 165.744 16.3844 165.377 17.2886C165.011 18.1916 164.825 19.1806 164.825 20.2285C164.825 21.2751 165.01 22.2665 165.377 23.1707C165.743 24.0726 166.27 24.8614 166.939 25.5125C167.609 26.1612 168.41 26.6758 169.32 27.0407C170.231 27.4093 171.253 27.5941 172.356 27.5941C173.441 27.5941 174.458 27.4093 175.378 27.0407C176.3 26.6758 177.106 26.1612 177.774 25.5102C178.445 24.8567 178.969 24.0691 179.334 23.1684C179.7 22.2677 179.886 21.2787 179.886 20.2273C179.885 19.1783 179.7 18.1893 179.334 17.2886ZM172.355 16.3337C173.501 16.3337 174.427 16.6964 175.108 17.411C175.791 18.1304 176.138 19.0782 176.138 20.2273C176.138 21.3788 175.792 22.3265 175.108 23.0436C174.427 23.7606 173.501 24.1232 172.355 24.1232C171.209 24.1232 170.277 23.7606 169.586 23.0436C168.894 22.3242 168.543 21.3764 168.543 20.2273C168.543 19.0794 168.894 18.1316 169.586 17.4122C170.277 16.6975 171.207 16.3337 172.355 16.3337Z" fill="#262627"/>
+                            <path d="M46.97 20.02L41.1256 30.1431L40.9089 29.7675L37.9384 24.6224V24.6212L35.2811 20.02H38.6531V20C38.6531 11.6053 31.8479 4.79896 23.4521 4.79896C21.3681 4.79896 19.3831 5.21811 17.5746 5.97751C15.0268 7.04657 12.831 8.79025 11.2133 10.9849L8.65134 6.54736C9.55203 5.55837 10.5493 4.66003 11.6289 3.86766C14.9408 1.43639 19.0287 0 23.4521 0C34.4982 0 43.4532 8.95391 43.4532 20V20.02H46.97Z" fill="#262627"/>
+                            <path d="M38.2881 33.4126C36.8929 34.9549 35.2599 36.2795 33.4479 37.3273C30.5069 39.0275 27.0937 40 23.4521 40C12.4118 40 3.45912 31.0531 3.45205 20.0129H0L5.84447 9.88989L6.01872 10.1913L8.98334 15.327L11.6889 20.0129H8.25219C8.25926 28.4017 15.0621 35.201 23.4521 35.201C26.3531 35.201 29.0634 34.3886 31.3687 32.9793C33.0688 31.9397 34.5499 30.5751 35.7238 28.9727L38.2881 33.4126Z" fill="#262627"/>
+                            <path d="M23.4521 10.8213C18.3835 10.8213 14.2744 14.9315 14.2744 20.0001C14.2744 25.0687 18.3835 29.1789 23.4521 29.1789C28.5218 29.1789 32.6308 25.0687 32.6308 20.0001C32.6308 14.9315 28.5218 10.8213 23.4521 10.8213ZM23.4521 24.4293C21.0067 24.4293 19.024 22.4466 19.024 20.0001C19.024 17.5535 21.0067 15.5708 23.4521 15.5708C25.8986 15.5708 27.8813 17.5535 27.8813 20.0001C27.8813 22.4466 25.8986 24.4293 23.4521 24.4293Z" fill="#262627"/>
+                        </svg>
+                        <div class="contacts footer_contact">
+                            <div class="address_icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12.0526L21 4L12.9474 21L11.1579 13.8421L4 12.0526Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Адрес</p>
+                                </div>
+                                <p>Ташкент, ул. Эльбека, 61/3</p>
+                            </div>
+                            <div class="phone_icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9995 15.9791V18.3877C20.0004 18.6113 19.9545 18.8327 19.8648 19.0375C19.775 19.2424 19.6434 19.4263 19.4783 19.5775C19.3132 19.7286 19.1183 19.8437 18.906 19.9154C18.6938 19.987 18.4689 20.0136 18.2457 19.9935C15.7702 19.725 13.3923 18.8808 11.3031 17.5286C9.35937 16.2959 7.71141 14.6512 6.47627 12.7113C5.11669 10.6168 4.27059 8.23206 4.00653 5.75036C3.98643 5.52834 4.01286 5.30457 4.08416 5.0933C4.15546 4.88203 4.27005 4.6879 4.42065 4.52325C4.57124 4.35861 4.75454 4.22706 4.95886 4.13699C5.16319 4.04691 5.38407 4.00029 5.60744 4.00008H8.02086C8.41128 3.99624 8.78977 4.13422 9.0858 4.3883C9.38182 4.64237 9.57517 4.99521 9.62981 5.38103C9.73168 6.15185 9.92059 6.9087 10.1929 7.63713C10.3012 7.9245 10.3246 8.23682 10.2604 8.53707C10.1963 8.83732 10.0472 9.11292 9.83093 9.33121L8.80925 10.3509C9.95446 12.3609 11.6221 14.0252 13.6361 15.1682L14.6578 14.1485C14.8765 13.9326 15.1527 13.7839 15.4535 13.7198C15.7544 13.6558 16.0673 13.6792 16.3552 13.7872C17.0851 14.059 17.8435 14.2476 18.6158 14.3492C19.0066 14.4042 19.3635 14.6007 19.6186 14.9012C19.8737 15.2017 20.0093 15.5853 19.9995 15.9791Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Телефон</p>
+                                </div>
+                                <p>+998 71 202 13 12</p>
+                            </div>
+                            <div class="open_hours_icon">
+                                <div>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 7.2V12L15.2 13.6M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p>Время работы</p>
+                                </div>
+                                <p>ПН-ВС 09:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Правая часть footer-->
+                    <div class="right_side">
+                        <div>
+                            <div>
+                                <a href="../pages/error.html">Chevrolet</a>
+                                <a href="../pages/error.html">MG</a>
+                                <a href="../pages/error.html">Jetour</a>
+                                <a href="../pages/brand.html">Soueast</a>
+                            </div>
+                            <div>
+                                <a href="../pages/trade_in.html">Trade-in</a>
+                                <a href="../pages/shares.html">Акции</a>
+                                <a href="../pages/service.html">Сервис</a>
+                                <a href="../pages/warranty.html">Гарантия</a>
+                                <a href="../pages/manuals.html">Руководство по эксплуатации</a>
+                            </div>
+                            <div>
+                                <a href="../pages/about.html">О компании</a>
+                                <a href="../pages/contacts.html">Контакты</a>
+                            </div>
+                        </div>
+                        <div class="social_media footer_social_media">
+                            <a href="https://t.me/olamavto_uz">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.6654 3.99984C14.6654 3.2665 14.0654 2.6665 13.332 2.6665H2.66536C1.93203 2.6665 1.33203 3.2665 1.33203 3.99984M14.6654 3.99984V11.9998C14.6654 12.7332 14.0654 13.3332 13.332 13.3332H2.66536C1.93203 13.3332 1.33203 12.7332 1.33203 11.9998V3.99984M14.6654 3.99984L7.9987 8.6665L1.33203 3.99984" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>Написать на почту</p>
+                            </a>
+                            <a href="https://www.instagram.com/olamavto_uz/">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7616 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45419 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>instagram</p>
+                            </a>
+                            <a href="https://www.facebook.com/AvtosalonOLAMAVTO">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5 7.225V9.4H12.45C12.6 9.4 12.675 9.55 12.675 9.7L12.375 11.125C12.375 11.2 12.225 11.275 12.15 11.275H10.5V16.75H8.25V11.35H6.975C6.825 11.35 6.75 11.275 6.75 11.125V9.7C6.75 9.55 6.825 9.475 6.975 9.475H8.25V7C8.25 5.725 9.225 4.75 10.5 4.75H12.525C12.675 4.75 12.75 4.825 12.75 4.975V6.775C12.75 6.925 12.675 7 12.525 7H10.725C10.575 7 10.5 7.075 10.5 7.225Z" fill="#262627"/>
+                                    <path d="M11.15 16.75H6.35C2.35 16.75 0.75 15.15 0.75 11.15V6.35C0.75 2.35 2.35 0.75 6.35 0.75H11.15C15.15 0.75 16.75 2.35 16.75 6.35V11.15C16.75 15.15 15.15 16.75 11.15 16.75Z" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>facebook</p>
+                            </a>
+                            <a href="https://t.me/olamavto_uz">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_4218_1136)">
+                                        <path d="M14.6654 1.3335L7.33203 8.66683M14.6654 1.3335L9.9987 14.6668L7.33203 8.66683M14.6654 1.3335L1.33203 6.00016L7.33203 8.66683" stroke="#262627" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_4218_1136">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>telegram</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Нижняя часть footer-->
+                <div class="copyrighted">
+                    <p>Предложение не является публичной офертой. 
+                        Сведения о ценах на продукцию бренда Chevrolet, содержащиеся на сайте, носят исключительно информационный характер. 
+                        Указанные цены могут отличаться от действительных цен в зависимости от комплектации. 
+                        Для получения подробной информации об актуальных ценах на продукцию Chevrolet обращайтесь в офис компании Olamavto. 
+                        Представленное изображение автомобиля может отличаться от реализуемого.
+                        Приобретение любой продукции бренда Chevrolet осуществляется в соответствии с условиями индивидуального договора купли-продажи.</p>
+                </div>
+            </div>
+        </footer>
+        <div id="welcome_modal" class="modal">
+            <div class="modal_content">
+                <button class="modal_close" onclick="closeModal()">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#262626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <h2>Теперь все в одном месте — наш Telegram-бот!</h2>
+                <p>Узнайте о моделях, запишитесь на тест-драйв или сервис, получите консультацию и будьте в курсе акций
+                    Переходите в бот прямо сейчас!</p>
+                <a href="https://t.me/olamavto_uz" target="_blank">Перейти</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,431 @@
+.hero_block{
+    padding: 40px 40px 64px 40px;
+}
+
+.hero_block_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 120px 48px 64px 48px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_block_heading h1{
+   font-size: 40px;
+}
+
+.hero_block_heading p{
+    font-size: 16px;
+    color: var(--gray-text);
+    width: 750px;
+    line-height: 150%;
+}
+
+.hero_block_main{
+    display: grid;
+    grid-template-columns: repeat(2, 710px);
+    grid-template-rows: 255px 200px 255px;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero_about_image_abo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image_1_abo{
+    background-image: url("../images/about_1.png");
+    grid-row: 1 / 3; 
+    border-radius: 40px 0 40px 0;
+}
+
+.image_2_abo{
+    background-image: url("../images/about_2.png");
+    border-radius: 0 40px 0 40px;
+}
+
+.image_3_abo{
+    background-image: url("../images/about_3.png");
+    border-radius: 0 40px 0 40px;
+}
+
+.image_4_abo{
+    background-image: url("../images/about_4.png");
+    grid-row: 2 / 4; 
+    border-radius: 40px 0 40px 0;
+}
+
+.partner_block{
+    padding: 72px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.partner_slider{
+    width: 100%;
+    height: 770px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.partner_slider input{
+    display: none;
+}
+
+.slide_wrapper_par{
+    width: 100%;
+    height: 770px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide_par{
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pertner_description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slide_1_par{
+    background-image: url("../images/dealership_slider_3.jpg");
+}
+
+.slide_2_par{
+    background-image: url("../images/information_about_warranty_3.jpg");
+}
+
+.slide_3_par{
+    background-image: url("../images/service.png");
+}
+
+.slide_4_par{
+    background-image: url("../images/dealership_slider_4.jpg");
+}
+
+.navigation_par{
+    position: absolute;
+    right: 40px;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigation_par label img{
+    width: 40px;
+}
+
+.slide_counter_par{
+    color: var(--white-text);
+    font-size: 14px;
+}
+
+#slide_par_1:checked ~ .slide_wrapper_par{
+    transform: translateY(0);
+}
+
+#slide_par_2:checked ~ .slide_wrapper_par{
+    transform: translateY(-770px);
+}
+
+#slide_par_3:checked ~ .slide_wrapper_par{
+    transform: translateY(-1540px);
+}
+
+#slide_par_4:checked ~ .slide_wrapper_par{
+    transform: translateY(-2310px);
+}
+
+.nav_button_par{
+    display: none;
+}
+
+.slide_counter_par::after {
+    content: '1/4';
+}
+
+#slide_par_1:checked ~ .navigation_par .slide_counter_par::after{
+    content: '1/4';
+}
+
+#slide_par_2:checked ~ .navigation_par .slide_counter_par::after{
+    content: '2/4';
+}
+
+#slide_par_3:checked ~ .navigation_par .slide_counter_par::after{
+    content: '3/4';
+}
+
+#slide_par_4:checked ~ .navigation_par .slide_counter_par::after{
+    content: '4/4';
+}
+
+#slide_par_1:checked ~ .navigation_par .nav_button_par.nav_up_par.to_slide_2_up_par,
+#slide_par_1:checked ~ .navigation_par .nav_button_par.nav_down_par.to_slide_4_down_par{
+    display: flex;
+}
+
+#slide_par_2:checked ~ .navigation_par .nav_button_par.nav_up_par.to_slide_3_up_par,
+#slide_par_2:checked ~ .navigation_par .nav_button_par.nav_down_par.to_slide_1_down_par{
+    display: flex;
+}
+
+#slide_par_3:checked ~ .navigation_par .nav_button_par.nav_up_par.to_slide_4_up_par,
+#slide_par_3:checked ~ .navigation_par .nav_button_par.nav_down_par.to_slide_2_down_par{
+    display: flex;
+}
+
+#slide_par_4:checked ~ .navigation_par .nav_button_par.nav_up_par.to_slide_1_up_par,
+#slide_par_4:checked ~ .navigation_par .nav_button_par.nav_down_par.to_slide_3_down_par{
+    display: flex;
+}
+
+.pertner_description>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.pertner_description>div>h2{
+    font-size: 40px;
+    width: 430px;
+    line-height: 150%;
+    text-align: left;
+}
+
+.pertner_description>div>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.pertner_description>div>div>h6{
+    font-size: 22px;
+}
+
+.pertner_description>div>div>p{
+    font-size: 16px;
+    color: var(--gray-text);
+}
+
+.pertner_description>div>hr{
+    width: 1px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.services_block{
+    width: 100%;
+    padding: 120px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.services_block input{
+    display: none;
+}
+
+.services_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.services_heading>div{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.services_heading>div>h2{
+    font-size: 40px;
+    width: 100%;
+}
+
+.services_heading>div>label{
+    font-size: 18px;
+    color: var(--black-text);
+    padding: 12px 24px;
+}
+
+.services_containers{
+    display: none;
+}
+
+.services_containers>div{
+    border-radius: 30px;
+    height: 510px;
+}
+
+.services_containers_left{
+    background-color: var(--gray-element);
+    padding: 56px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 620px;
+}
+
+.services_containers_left>div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.services_containers_left>div>h3{
+    font-size: 24px;
+}
+
+.services_containers_left>div>ul{
+    margin-left: 30px;
+}
+
+.services_containers_left>div>ul>li{
+    font-size: 16px;
+    color: var(--gray-text);
+}
+
+#metal_workshop:checked ~ .services_main .metal_workshop_block,
+#bodywork:checked ~ .services_main .bodywork_block,
+#detailing:checked ~ .services_main .detailing_block{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#metal_workshop:checked ~ .services_heading>div label[for="metal_workshop"],
+#bodywork:checked ~ .services_heading>div label[for="bodywork"],
+#detailing:checked ~ .services_heading>div label[for="detailing"]{
+    border-bottom: 1px solid var(--black-text);
+}
+
+.services_containers_right{
+    width: 1180px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.workshop_block_image{
+    background-image: url("../images/dealership_slider_2.jpg");
+}
+
+.bodywork_block_image{
+    background-image: url("../images/information_about_warranty_2.jpg");
+}
+
+.detailing_block_image{
+    background-image: url("../images/shares.png");
+}
+
+.image_6{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/690333642e059.png");
+}
+
+.image_7{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/690205e3b47cb.png");
+}
+
+.image_8{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ef8c0fd6f7d.png");
+}
+
+.image_9{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/68ef8abdcdb38.png");
+}
+
+.image_10{
+    background-image: url("https://admin.olamavto.uz/storage/photos/original/6901fbc239da1.png");
+}
+
+.horizontal_slider_mod_heading{
+    gap: 16px !important;
+}
+
+.horizontal_slider_mod_heading p{
+    color: var(--red-text) !important;
+}
+
+.horizontal_slide_mod_content>:first-child>:first-child{
+    height: 120px !important;
+}
+
+.horizontal_slide_mod_content{
+    height: 320px !important;
+}
+
+.about_forms_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    padding: 120px 40px;
+}
+
+.about_forms_heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.about_forms_heading p{
+    color: var(--red-text);
+    font-size: 16px;
+}
+
+.about_forms_heading h2{
+   font-size: 40px;
+}
+
+.about_forms_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.crediting_forms_main{
+    color: var(--black-text);
+    width: calc(100% - 940px);
+    height: 460px;
+    background-color: var(--gray-element);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 40px;
+}
+
+.crediting_calculator_main_right{
+    width: 940px;
+    height: 460px;
+}
